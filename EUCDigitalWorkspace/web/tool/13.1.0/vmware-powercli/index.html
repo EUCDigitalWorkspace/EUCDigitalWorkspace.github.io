@@ -1,0 +1,801 @@
+
+    <!DOCTYPE html>
+    <html class="vmware aui ltr" dir="ltr" lang="en-US">
+    <head>
+        <title>VMware PowerCLI</title>
+        <meta content="initial-scale=1.0, width=device-width" name="viewport"/>
+        <meta name="google-site-verification" content="4sw39tzmJEJbKLHofv5AZrf3qetHBTFB_-FGLJzzP18"/>
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+        <link href="/everay-assets/vmware-code-theme/images/favicon.ico" rel="Shortcut Icon"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/aui.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/head.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/main.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/jquery.jstree.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/dc/evidon.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/dc/master.css"/>
+        <link rel="stylesheet" href="/everay-assets/dp-portlet/css/artifactDetail.css"/>
+        <link rel="stylesheet" href="/everay-assets/dp-portlet/css/searchResults.css"/>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/everay-assets/html/css/main.css"/>
+        <link rel="stylesheet" href="/everay-assets/everay/css/everay-lib.css"/>
+
+        
+    
+        <script type="text/plain" class="optanon-category-C0002">
+            window["_paq"] = window["_paq"] || [];
+            (function(a,b,c,d,e,f) {
+                window[d] = window[d] || {};
+                window[d]._q = window[d]._q || [];
+                ['identify', 'page', 'track', 'metadata', 'locale', 'theme'].forEach(function(t) {
+                    window[d][t] = function() {
+                        var e = Array.prototype.slice.call(arguments); e.unshift(t); window[d]._q.push(e);
+                    }
+                });
+                window[d]._url = c;
+                window[d].init = window[d].init || function(p,q,r) {
+                    if (!window[d].initialized) { // to ensure init is executed only once
+                        window[d]._clientId = p; window[d]._clientName = q; window[d]._configs = r || {};
+                        window[d].initialized = true;
+                        e=a.createElement(b);e.async=1;e.src=c+'?client_id='+p+'&namespace='+d;
+                        f=a.getElementsByTagName(b)[0];f.parentNode.insertBefore(e,f);
+                    }
+                };
+
+                function uuidv4() {
+                    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                        var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+                        return v.toString(16);
+                    });
+                }
+                window['identity'] = uuidv4();
+            })(document, 'script', 'https://lumos.vmware.com/assets/lumos.js', 'lumos');
+
+            lumos.init('esp-prod-133-jxoiz', 'VMware Developer');
+        </script>
+    
+
+        
+
+<script src="https://www.vmware.com/content/dam/digitalmarketing/onetrust/assets/js/jquery-1.11.0.min.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="b9242434-9feb-47be-a894-3a9e658fdd50"></script>
+<script type="text/javascript"> function OptanonWrapper() { { window.dataLayer.push({ event: 'OneTrustGroupsUpdated' }); } } </script>
+
+
+        
+    
+        <script type="text/plain" class="optanon-category-C0002" async src='https://www.googletagmanager.com/gtag/js?id=G-LZ5W0Z51BZ'></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+        </script>
+        <script type="text/plain" class="optanon-category-C0002">
+                // load google analytics script
+                gtag('js', new Date());
+                gtag('config', 'G-LZ5W0Z51BZ');
+        </script>
+    
+
+    <script >bazadebezolkohpepadr="1802994684"</script><script type="text/javascript" src="https://developer.vmware.com/akam/13/6b778314"  defer></script></head>
+
+    <body class=" yui3-skin-sam controls-visible guest-site signed-out public-page site">
+    <div id="container">
+        
+    <div class="navbar main-navbar" style="height: 60px;">
+        <div class="navbar-inner user-nav" style="background-color: #15193D!important;">
+            <div class="container">
+                <div class="device-search"><a class="no-link-anchor" id="topnav-device-close-icon"><i
+                        class="fa fa-close" style="color: #fff;font-size:20px" aria-hidden="true"></i></a> <a
+                        class="no-link-anchor" id="topnav-device-search-icon"><i class="fa fa-search"
+                                                                                    style="color: #fff;font-size:20px"
+                                                                                    aria-hidden="true"></i></a>
+                    <a id="top-nav-device-main-icon" class="btn btn-navbar collapsed"
+                       data-toggle="collapse" data-target=".navbar-responsive-collapse"> <i class="fa fa-bars"
+                                                                                            style="color: #fff;font-size:20px"></i>
+                    </a></div>
+                <div><a class="brand code_logo internal" href="/" rel="noopener" style="align-items: center;"
+                        target="_self">
+                        <div id="brand-logo-with-title-text">
+                            <img class="logo-img" src="/everay-assets/vmware-code-theme/images/VMware-by-Broadcom-Logo_white.svg" alt="vmware logo"/>
+                            <div class="brand-text">Developer</div>
+                        </div>
+                </a></div>
+                <div id="navigationHeader" class="nav-collapse navbar-responsive-collapse collapse" style="height: 0px;">
+                    <ul id="nav-header-link" class="nav">
+                        <li class="first" style="border-left: 1px solid rgba(255, 255, 255, 0.15)"><a href="/home"
+                                                                                                      target="_self">
+                            <span>Home</span> </a></li>
+                        <li><a href="https://developer.vmware.com/products" target="_self"> <span>Products</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/apis" target="_self"> <span>APIs</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/powercli" target="_self"> <span>PowerCLI</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/samples" target="_self"> <span>Code Samples</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/sdks" target="_self"> <span>SDKs</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/tools" target="_self"> <span>Tools</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/join" target="_self"><span>Join {code}</span>
+                        </a></li>
+                    </ul> 
+                    <ul class="nav pull-right" id="nav-header-items-right">
+                        <li class="desktop-search"><a class="no-link-anchor" id="topnav-search-icon"
+                                                      style="color: #FFFFFF;"><i class="fa fa-search"
+                                                                                 aria-hidden="true"></i></a>
+                            <form method="get" action="/search" id="topnav-search-form"
+                                  style="display:none;margin-left:12px;margin-top:3px;" class=" internal"><input
+                                    class="topnav-search-input" placeholder="Search VMware Developer"
+                                    type="text" required="required"
+                                    value="" name="keywords"/>
+                                <button type="submit" tabindex="-1" class="topnav-search-btn"><i
+                                        class="fa fa-search"></i></button>
+                            </form>
+                        </li>
+                        
+                        <li class="login-tooltip"><a
+                                href="https://devportal-csp-authenticator.esp.vmware.com/api/auth/discovery?targetUri=https%3a%2f%2fdeveloper.vmware.com/web/dp/horizon-login"
+                                id="login-trigger" style="background: none;padding-left: 10px;font-weight: normal;"
+                                target="_self"> Login </a> <span class="login-tooltiptext">Login with your VMware account (Customer Connect credentials).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="device-search">
+            <div class="device-topnav-search">
+                <form method="get" action="/search" style="width: 100%;" class="internal">
+                    <input class="topnav-search-input device" placeholder="Search" required="required" value="" name="keywords" type="text"/>
+                    <button type="submit" tabindex="-1" class="device-topnav-search-btn"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+        <div style="clear:both"></div>
+        <div id="content" class="clearfix">
+            <div id="main-content" class="generic-100">
+                
+    
+    <div class="bread-crumb-layout">
+    <div class="bread-crumb">
+        <div class="span9">
+            
+            <nav class="breadcrumb"> 
+                
+                    
+                    <span class="bdivider">&nbsp;/&nbsp;</span> <a class="breadcrumb-item internal"
+                                                                href="https://developer.vmware.com/tools" target="_self"> Tools </a>
+                    
+                
+                    
+                    <span class="bdivider">&nbsp;/&nbsp;</span> <a class="breadcrumb-item active internal"
+                                                                    href="https://developer.vmware.com/tools" target="_self"> VMware PowerCLI </a>
+                    
+                
+            </nav>
+        </div>
+        <div class="span2" style="float:right; display: none;">
+            <div class="social-links">
+                <div class="overlay-con"><a href="https://www.twitter.com/home?status=/web/tool/4.4.0/ovf"
+                                            target="_blank" rel="noopener"><i
+                        class="fa fa-twitter"></i></a>
+                    <div class="social-overlay"><i class="fa fa-twitter"></i> <a
+                            href="https://www.twitter.com/home?status=/web/tool/4.4.0/ovf"
+                            target="_blank" rel="noopener">Share</a></div>
+                </div>
+                <div class="overlay-con"><a
+                        href="https://www.facebook.com/sharer/sharer.php?u=/web/tool/4.4.0/ovf"
+                        target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
+                    <div class="social-overlay"><i class="fa fa-facebook"></i> <a
+                            href="https://www.facebook.com/sharer/sharer.php?u=/web/tool/4.4.0/ovf"
+                            target="_blank" rel="noopener">Share</a></div>
+                </div>
+                <div class="overlay-con"><a target="_blank"
+                                            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/web/tool/4.4.0/ovf&amp;title=Artifact Detail&amp;summary=&amp;source=developer.vmware.com"
+                                            rel="noopener"><i class="fa fa-linkedin"></i></a>
+                    <div class="social-overlay"><i class="fa fa-linkedin"></i> <a target="_blank"
+                                                                                  href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/web/tool/4.4.0/ovf&amp;title=Artifact Detail&amp;summary=&amp;source=developer.vmware.com"
+                                                                                  rel="noopener">Share</a>
+                    </div>
+                </div>
+                <div class="overlay-con"><a target="_blank"
+                                            href="https://plus.google.com/share?url=/web/tool/4.4.0/ovf"
+                                            rel="noopener"><i
+                        class="fa fa-google-plus"></i></a>
+                    <div class="social-overlay"><i class="fa fa-google-plus"></i> <a target="_blank"
+                                                                                     href="https://plus.google.com/share?url=/web/tool/4.4.0/ovf"
+                                                                                     rel="noopener">Share</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                <div class="row-fluid">
+                    
+    
+    <div class="portlet-column portlet-column-only span12" id="column-1">
+    <div class="portlet-dropzone portlet-column-content portlet-column-content-first"
+         id="layout-column_column-1">
+        <div class="portlet-boundary portlet-boundary_artifactdetail_WAR_dpportlet_ portlet-static portlet-static-end artifact-detail-portlet "
+             id="p_p_id_artifactdetail_WAR_dpportlet_">
+            <span id="p_artifactdetail_WAR_dpportlet"></span>
+            <div class="portlet-borderless-container" style="">
+                <div class="portlet-body"> 
+                    
+                    <div class="artifact-header">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td><h1 class="artifact-name">VMware PowerCLI</h1></td>
+                                <td class="versions">
+                                    <select name="forma" onchange="location = this.value;">
+                                        
+                                        <option value="/web/tool/13.2/vmware-powercli" > 13.2</option>
+                                        
+                                        <option value="/web/tool/13.1.0/vmware-powercli"  selected="selected"> 13.1.0</option>
+                                        
+                                        <option value="/web/tool/13.0.0/vmware-powercli" > 13.0.0</option>
+                                        
+                                        <option value="/web/tool/12.7.0/vmware-powercli" > 12.7.0</option>
+                                        
+                                        <option value="/web/tool/12.6.0/vmware-powercli" > 12.6.0</option>
+                                        
+                                        <option value="/web/tool/12.5.0/vmware-powercli" > 12.5.0</option>
+                                        
+                                        <option value="/web/tool/12.4/vmware-powercli" > 12.4</option>
+                                        
+                                        <option value="/web/tool/12.3.0/vmware-powercli" > 12.3.0</option>
+                                        
+                                        <option value="/web/tool/12.2.0/vmware-powercli" > 12.2.0</option>
+                                        
+                                        <option value="/web/tool/12.1.0/vmware-powercli" > 12.1.0</option>
+                                        
+                                        <option value="/web/tool/12.0.0/vmware-powercli" > 12.0.0</option>
+                                        
+                                        <option value="/web/tool/11.5.0/vmware-powercli" > 11.5.0</option>
+                                        
+                                        <option value="/web/tool/11.4.0/vmware-powercli" > 11.4.0</option>
+                                        
+                                        <option value="/web/tool/11.3.0/vmware-powercli" > 11.3.0</option>
+                                        
+                                        <option value="/web/tool/11.2.0/vmware-powercli" > 11.2.0</option>
+                                        
+                                        <option value="/web/tool/11.1.0/vmware-powercli" > 11.1.0</option>
+                                        
+                                        <option value="/web/tool/11.0.0/vmware-powercli" > 11.0.0</option>
+                                        
+                                        <option value="/web/tool/10.2.0/vmware-powercli" > 10.2.0</option>
+                                        
+                                        <option value="/web/tool/10.1.1/vmware-powercli" > 10.1.1</option>
+                                        
+                                        <option value="/web/tool/10.1.0/vmware-powercli" > 10.1.0</option>
+                                        
+                                        <option value="/web/tool/10.0.0/vmware-powercli" > 10.0.0</option>
+                                        
+                                        <option value="/web/tool/6.5.4/vmware-powercli" > 6.5.4</option>
+                                        
+                                        <option value="/web/tool/6.5.3/vmware-powercli" > 6.5.3</option>
+                                        
+                                        <option value="/web/tool/6.5.2/vmware-powercli" > 6.5.2</option>
+                                        
+                                        <option value="/web/tool/6.5.1/vmware-powercli" > 6.5.1</option>
+                                        
+                                        <option value="/web/tool/6.5 R1/vmware-powercli" > 6.5 R1</option>
+                                        
+                                    </select>
+                                </td>
+                                <td style="vertical-align: middle;"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row-fluid">
+
+                    <div class="span9">
+                        <div class="webcontent">
+                            
+                                <p><strong>Overview</strong></p>
+
+<p class="ql-align-justify">VMware PowerCLI is a command-line and scripting tool built on PowerShell, and provides more than 7000 cmdlets for managing and automating VMware vSphere, VMware Cloud Director, vRealize Operations Manager, vSAN, VMware NSX-T, VMware Cloud Services, VMware Cloud on AWS, VMware HCX, VMware Site Recovery Manager, and VMware Horizon environments.</p>
+
+                            
+                        </div>
+                        <div id="tags">
+                            
+                        </div>
+                        
+                        <div id="download" class="private-download">
+                                
+                                        
+                                            
+                                                <h3><span>1</span>Downloads</h3>
+                                            
+                                                <p>By downloading, installing, or using the Software, you agree to be bound by the terms of VMware’s Software Development Kit License Agreement unless there is a different license provided in or specifically referenced by the downloaded file or package. If you disagree with any terms of the agreement, then do not use the Software.</p>
+                                            
+                                            <div class="downloads-for-artifacts">
+                                            <div class="lfr-search-container ">
+                                                <div id="_artifactdetail_WAR_dpportlet_artifactsSearchContainerSearchContainer">
+                                                    <table class="table table-bordered table-hover table-striped">
+                                                        <thead class="table-columns">
+                                                        <tr>
+                                                            <th class="table-first-header"
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-name">
+                                                                Name
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-version">
+                                                                Version
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-size">
+                                                                Size
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-md5">
+                                                                MD5
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-5">
+                                                                &nbsp;
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-6">
+                                                                &nbsp;
+                                                            </th>
+                                                            <th class="table-last-header"
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-7">
+                                                                &nbsp;
+                                                            </th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody class="table-data">
+                                                        
+                                                        <tr class=" ">
+                                                            <td class="table-cell first">
+                                                                
+                                                                <span
+                                                                    id="doc-18376"
+                                                                    title="VMware PowerCLI"> VMware PowerCLI</span>
+                                                                
+                                                            </td>
+                                                            <td class="table-cell "> 13.1.0</td>
+                                                            <td class="table-cell "> </td>
+                                                            <td class="table-cell "> </td>
+                                                            <td class="table-cell documentation"> &nbsp;
+                                                            </td>
+                                                            <td class="table-cell download"><a
+                                                                    href="https://www.powershellgallery.com/packages/VMware.PowerCLI"
+                                                                    class="btn displayEula internal"
+                                                                    target="_self">Download</a></td>
+                                                            <td class="table-cell last"></td>
+                                                        </tr>
+                                                        
+                                                        <tr class=" ">
+                                                            <td class="table-cell first">
+                                                                
+                                                                <span
+                                                                    id="doc-18611"
+                                                                    title="VMware-PowerCLI-13.1.0-21624340.zip"> VMware-PowerCLI-13.1.0-21624340.zip</span>
+                                                                
+                                                            </td>
+                                                            <td class="table-cell "> 13.1.0</td>
+                                                            <td class="table-cell "> 131.0  MB</td>
+                                                            <td class="table-cell "> 4e5c6f443dd2f130b7d29ed4fc12e70f</td>
+                                                            <td class="table-cell documentation"> &nbsp;
+                                                            </td>
+                                                            <td class="table-cell download"><a
+                                                                    href="https://vdc-download.vmware.com/vmwb-repository/dcr-public/2142f98d-f49c-4972-8f73-c2697aa744cd/37af7f1b-e6d5-47ac-9daf-7eecf86358f1/VMware-PowerCLI-13.1.0-21624340.zip"
+                                                                    class="btn displayEula internal"
+                                                                    target="_self">Download</a></td>
+                                                            <td class="table-cell last"></td>
+                                                        </tr>
+                                                        
+                                                        <tr class="lfr-template">
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                
+                        </div>
+                        <div id="documentation">
+                            
+                                
+                                    
+                                    <h3><span>2</span>Documentation and Reference</h3>
+                                    <div class="documents-for-artifacts">
+                                        <div class="grouped-downloads">
+                                            <div class="lfr-search-container ">
+                                                <div id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_1SearchContainer">
+                                                    <table class="table table-bordered table-hover table-striped">
+                                                        <thead class="table-columns">
+                                                        <tr>
+                                                            <th class="table-first-header"
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_1_col-name">
+                                                                Name
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_1_col-size">
+                                                                Size
+                                                            </th>
+                                                            <th class="table-last-header"
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_1_col-3">
+                                                                &nbsp;
+                                                            </th>
+                                                        </tr>
+                                                        </thead>
+                                                        
+                                                            
+                                                                <tbody class="category-row">
+                                                                    <tr>
+                                                                        <td colspan="100">Development Guides </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://developer.vmware.com/docs/15315"
+                                                                                data-tracking-name="PowerCLI User&#39;s Guide"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            PowerCLI User&#39;s Guide
+                                                                        </a>
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell "></td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://vdc-download.vmware.com/vmwb-repository/dcr-public/718285df-1ec9-491a-bb3e-5032803bb06d/d65211c1-55ac-4552-8ca4-9a3d8a9e4d93/vmware-powercli-131-user-guide.pdf"
+                                                                                data-tracking-name="PowerCLI User&#39;s Guide PDF"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            PowerCLI User&#39;s Guide PDF
+                                                                        </a>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell ">2.0  MB</td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                        
+                                                            
+                                                                <tbody class="category-row">
+                                                                    <tr>
+                                                                        <td colspan="100">General </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://vdc-download.vmware.com/vmwb-repository/dcr-public/f479301e-3164-47bc-9584-89b84a1bf5ce/c4ea2d2f-bf6d-4c18-bb20-6c4782ac6576/powercli1310-compat-matrix.html"
+                                                                                data-tracking-name="Compatibility Matrix"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            Compatibility Matrix
+                                                                        </a>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell ">8.0  KB</td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://developer.vmware.com/docs/15353"
+                                                                                data-tracking-name="PowerCLI Change Log"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            PowerCLI Change Log
+                                                                        </a>
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell "></td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                        
+                                                            
+                                                                <tbody class="category-row">
+                                                                    <tr>
+                                                                        <td colspan="100">OSS </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://vdc-download.vmware.com/vmwb-repository/dcr-public/717cd806-c3fc-4604-8544-647f15c667e4/69d878cd-d6ff-43b6-816e-b39474ed8e01/open_source_license_VMware_PowerCLI_13.1%20GA.zip"
+                                                                                data-tracking-name="Open Source License"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            Open Source License
+                                                                        </a>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell ">32.4  KB</td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                        
+                                                            
+                                                                <tbody class="category-row">
+                                                                    <tr>
+                                                                        <td colspan="100">Reference Guides </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://developer.vmware.com/docs/powercli/latest/products/"
+                                                                                data-tracking-name="Cmdlet Documentation"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            Cmdlet Documentation
+                                                                        </a>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell "></td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                        
+                                                            
+                                                                <tbody class="category-row">
+                                                                    <tr>
+                                                                        <td colspan="100">Release Notes </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://vdc-download.vmware.com/vmwb-repository/dcr-public/40a9f75e-c3e0-4ee2-be49-2b4e44e8ac9c/88b7f7e4-b8c8-474d-8a6d-01eb5273dc85/vmware-powercli-1310-release-notes.html"
+                                                                                data-tracking-name="PowerCLI 13.1.0 Release Notes"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            PowerCLI 13.1.0 Release Notes
+                                                                        </a>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell ">20.0  KB</td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                        
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                       </div>
+                                    </div>
+                                
+                            
+
+                        </div>
+
+                        
+                    </div>
+                    <div class="span3">
+                        
+                            
+    
+
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div id="videoModalOverlay"></div>
+<div id="videoModal">
+    <span id="closeModalBtn"></span>
+    <div id="videoModalContent">
+        <video id="videoPlayer" preload="metadata" controls>
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+                </div>
+                </div>
+            </div>
+            <div class="portlet-boundary portlet-boundary_1_WAR_kaleodesignerportlet_ portlet-static portlet-static-end kaleo-designer-portlet "
+                 id="p_p_id_1_WAR_kaleodesignerportlet_"><span id="p_1_WAR_kaleodesignerportlet"></span></div>
+            <form action="#" id="hrefFm" method="post" name="hrefFm"><span></span></form>
+        </div>
+        
+    <footer>
+        <div class="gradient-hr"></div>
+        <div class="ph-footer">
+            <div class="footer-container-row ph-footer-row">
+                <div class="footer-container-col"><span> <a href="https://www.vmware.com" title="VMware Logo"
+                                                            target="_blank" class="nav-link external"
+                                                            rel="noopener"> <img alt="VMware Logo" width="134" aria-label="VMware Logo"
+                                                                                 src="/everay-assets/vmware-code-theme/images/VMware-by-Broadcom-Logo_color.svg"/> </a> </span>
+                </div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">Company</h4>
+                    <div class="footer-link-text ph-footer-col1-row2"><a
+                            href="https://www.vmware.com/download/eula.html" class="clickable external"
+                            target="_blank" rel="noopener"> End User Terms &amp; Conditions </a> <br/> <a
+                            href="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/company/vmw-modern-slavery-california-statement-2021.pdf"
+                            class="clickable external" target="_blank" rel="noopener"> California Transparency Act
+                        Statement </a> <br/> <a href="https://www.vmware.com/vmwarestore/"
+                                                class="clickable external"
+                                                target="_blank" rel="noopener">Store</a></div>
+                </div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">Support</h4>
+                    <div class="footer-link-text ph-footer-col1-row2"><a href="https://developer.vmware.com/support"
+                                                                         class="clickable internal" target="_self"
+                                                                         rel="noopener noreferrer">Developer Support
+                        Options</a> <br/> <a href="https://dcpn.my.site.com/login?so=00Di0000000biLz"
+                                             class="clickable internal" target="_self" rel="noopener noreferrer">DC
+                        Partner Network</a> <br/> <a href="https://docs.vmware.com/" class="clickable external"
+                                                     target="_blank" rel="noopener">Product Documentation</a> <br/>
+                        <a href="https://www.vmware.com/resources/compatibility/search.php" class="clickable external"
+                           target="_blank" rel="noopener">Compatibility Guide</a><br />
+                        <a class="feedback-trigger">Report an Issue on this Page</a></div>
+                </div>
+                <div class="footer-container-col ph-placeholder"></div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">Resources</h4>
+                    <div class="footer-link-text ph-footer-col1-row2"><a href="https://go.techzone.vmware.com/"
+                                                                         class="clickable external" target="_blank"
+                                                                         rel="noopener">VMware Tech Zone</a> <br/> <a
+                            href="https://www.vmware.com/training" class="clickable external" target="_blank"
+                            rel="noopener">Training</a> <br/> <a href="https://pathfinder.vmware.com/"
+                                                                 class="clickable external" target="_blank"
+                                                                 rel="noopener">Pathfinder</a> <br/></div>
+                </div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">VMware Social</h4>
+                    <table class="ph-footer-col4">
+                        <tbody>
+                        <tr>
+                            <td><a href="https://twitter.com/VMware" title="Twitter" target="_blank" rel="noopener"
+                                   class="ph-footer-col4-row2 external"> <i class="fa fa-twitter"></i> <span
+                                    class="social-media">Twitter</span> </a></td>
+                            <td><a href="https://www.facebook.com/vmware" title="Facebook" target="_blank"
+                                   rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                    class="fa fa-facebook-square"></i> <span
+                                    class="social-media">Facebook</span> </a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.youtube.com/user/vmwaretv" title="YouTube" target="_blank"
+                                   rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                    class="fa fa-youtube-square"></i> <span class="social-media">YouTube</span>
+                            </a></td>
+                            <td><a href="https://www.linkedin.com/company/vmware" title="LinkedIn" target="_blank"
+                                   rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                    class="fa fa-linkedin-square"></i> <span
+                                    class="social-media">LinkedIn</span> </a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="fb-links">
+                <hr class="br-black mb-90 line-size"/>
+                <span class="copy fb-links-text">Copyright © 2005-2024 Broadcom. All Rights Reserved. The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.</span> <a
+                    href="https://www.vmware.com/help/legal.html" title="Terms of Use" target="_blank"
+                    rel="noopener" class="fb-links-text external">Terms of Use</a> <a
+                    href="https://www.vmware.com/help/privacy.html" title="Privacy" target="_blank" rel="noopener"
+                    class="fb-links-text external">Privacy</a> <a
+                    href="https://www.vmware.com/help/privacy/california-privacy-rights.html"
+                    title="Your California Privacy Rights" target="_blank" rel="noopener"
+                    class="fb-links-text external">Your California Privacy Rights</a> <a
+                    href="https://www.vmware.com/help/accessibility.html" title="Accessibility" target="_blank"
+                    rel="noopener" name="&amp;lpos=nav_footer : 8&amp;le=event52,event75"
+                    class="fb-links-text external">Accessibility</a> <a
+                    href="https://www.vmware.com/help/trademarks.html" title="Trademarks" target="_blank"
+                    class="fb-links-text external" rel="noopener">Trademarks</a> <a
+                    href=" https://www.vmware.com/help.html" title="Help" target="_blank" rel="noopener noreferrer"
+                    class="fb-links-text">Help</a> <a href="https://www.vmware.com/forms/customer_feedback.html"
+                                                      title="Feedback" class="fb-links-text clickable external"
+                                                      target="_blank" rel="noopener">Feedback</a> <a
+                    href="https://www.vmware.com/company/contact_sales.html" title="Contact Sales" target="_blank"
+                    rel="noopener" class="fb-links-text external">Contact Sales</a></div>
+        </div>
+    </footer>
+
+
+        <button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie Settings</button>
+    <noscript><img src="https://developer.vmware.com/akam/13/pixel_6b778314?a=dD02ZjM4OGI5MjVkYmIwYzBlZWVlNGJlMjJiOWU1MTBiODNkNzY1ZTQ5JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript><script type="text/javascript"  src="/IqmVpEzabH39/EMxACt/JgC8Py/7hYa6rSLph/Zxs-fQE/Ol9/1KTBMLy0"></script></body>
+    <script src="/everay-assets/everay/js/everay-lib.js"></script>
+    </html>

@@ -1,0 +1,981 @@
+
+    <!DOCTYPE html>
+    <html class="vmware aui ltr" dir="ltr" lang="en-US">
+    <head>
+        <title>Documentation and Reference</title>
+        <meta content="initial-scale=1.0, width=device-width" name="viewport"/>
+        <meta name="google-site-verification" content="4sw39tzmJEJbKLHofv5AZrf3qetHBTFB_-FGLJzzP18"/>
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+        <link href="/everay-assets/vmware-code-theme/images/favicon.ico" rel="Shortcut Icon"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/aui.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/head.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/main.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/jquery.jstree.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/dc/evidon.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/dc/master.css"/>
+        <link rel="stylesheet" href="/everay-assets/dp-portlet/css/artifactDetail.css"/>
+        <link rel="stylesheet" href="/everay-assets/dp-portlet/css/searchResults.css"/>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/everay-assets/html/css/main.css"/>
+        <link rel="stylesheet" href="/everay-assets/everay/css/everay-lib.css"/>
+
+        
+    
+        <script type="text/plain" class="optanon-category-C0002">
+            window["_paq"] = window["_paq"] || [];
+            (function(a,b,c,d,e,f) {
+                window[d] = window[d] || {};
+                window[d]._q = window[d]._q || [];
+                ['identify', 'page', 'track', 'metadata', 'locale', 'theme'].forEach(function(t) {
+                    window[d][t] = function() {
+                        var e = Array.prototype.slice.call(arguments); e.unshift(t); window[d]._q.push(e);
+                    }
+                });
+                window[d]._url = c;
+                window[d].init = window[d].init || function(p,q,r) {
+                    if (!window[d].initialized) { // to ensure init is executed only once
+                        window[d]._clientId = p; window[d]._clientName = q; window[d]._configs = r || {};
+                        window[d].initialized = true;
+                        e=a.createElement(b);e.async=1;e.src=c+'?client_id='+p+'&namespace='+d;
+                        f=a.getElementsByTagName(b)[0];f.parentNode.insertBefore(e,f);
+                    }
+                };
+
+                function uuidv4() {
+                    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                        var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+                        return v.toString(16);
+                    });
+                }
+                window['identity'] = uuidv4();
+            })(document, 'script', 'https://lumos.vmware.com/assets/lumos.js', 'lumos');
+
+            lumos.init('esp-prod-133-jxoiz', 'VMware Developer');
+        </script>
+    
+
+        
+
+<script src="https://www.vmware.com/content/dam/digitalmarketing/onetrust/assets/js/jquery-1.11.0.min.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="b9242434-9feb-47be-a894-3a9e658fdd50"></script>
+<script type="text/javascript"> function OptanonWrapper() { { window.dataLayer.push({ event: 'OneTrustGroupsUpdated' }); } } </script>
+
+
+        
+    
+        <script type="text/plain" class="optanon-category-C0002" async src='https://www.googletagmanager.com/gtag/js?id=G-LZ5W0Z51BZ'></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+        </script>
+        <script type="text/plain" class="optanon-category-C0002">
+                // load google analytics script
+                gtag('js', new Date());
+                gtag('config', 'G-LZ5W0Z51BZ');
+        </script>
+    
+
+    <script >bazadebezolkohpepadr="1802994684"</script><script type="text/javascript" src="/akam/13/6b778315"  defer></script></head>
+
+    <body class=" yui3-skin-sam controls-visible guest-site signed-out public-page site">
+    <div id="container">
+        
+    <div class="navbar main-navbar" style="height: 60px;">
+        <div class="navbar-inner user-nav" style="background-color: #15193D!important;">
+            <div class="container">
+                <div class="device-search"><a class="no-link-anchor" id="topnav-device-close-icon"><i
+                        class="fa fa-close" style="color: #fff;font-size:20px" aria-hidden="true"></i></a> <a
+                        class="no-link-anchor" id="topnav-device-search-icon"><i class="fa fa-search"
+                                                                                    style="color: #fff;font-size:20px"
+                                                                                    aria-hidden="true"></i></a>
+                    <a id="top-nav-device-main-icon" class="btn btn-navbar collapsed"
+                       data-toggle="collapse" data-target=".navbar-responsive-collapse"> <i class="fa fa-bars"
+                                                                                            style="color: #fff;font-size:20px"></i>
+                    </a></div>
+                <div><a class="brand code_logo internal" href="/" rel="noopener" style="align-items: center;"
+                        target="_self">
+                        <div id="brand-logo-with-title-text">
+                            <img class="logo-img" src="/everay-assets/vmware-code-theme/images/VMware-by-Broadcom-Logo_white.svg" alt="vmware logo"/>
+                            <div class="brand-text">Developer</div>
+                        </div>
+                </a></div>
+                <div id="navigationHeader" class="nav-collapse navbar-responsive-collapse collapse" style="height: 0px;">
+                    <ul id="nav-header-link" class="nav">
+                        <li class="first" style="border-left: 1px solid rgba(255, 255, 255, 0.15)"><a href="/home"
+                                                                                                      target="_self">
+                            <span>Home</span> </a></li>
+                        <li><a href="/products" target="_self"> <span>Products</span>
+                        </a></li>
+                        <li><a href="/apis" target="_self"> <span>APIs</span>
+                        </a></li>
+                        <li><a href="/powercli" target="_self"> <span>PowerCLI</span>
+                        </a></li>
+                        <li><a href="/samples" target="_self"> <span>Code Samples</span>
+                        </a></li>
+                        <li><a href="/sdks" target="_self"> <span>SDKs</span>
+                        </a></li>
+                        <li><a href="/tools" target="_self"> <span>Tools</span>
+                        </a></li>
+                        <li><a href="/join" target="_self"><span>Join {code}</span>
+                        </a></li>
+                    </ul> 
+                    <ul class="nav pull-right" id="nav-header-items-right">
+                        <li class="desktop-search"><a class="no-link-anchor" id="topnav-search-icon"
+                                                      style="color: #FFFFFF;"><i class="fa fa-search"
+                                                                                 aria-hidden="true"></i></a>
+                            <form method="get" action="/search" id="topnav-search-form"
+                                  style="display:none;margin-left:12px;margin-top:3px;" class=" internal"><input
+                                    class="topnav-search-input" placeholder="Search VMware Developer"
+                                    type="text" required="required"
+                                    value="" name="keywords"/>
+                                <button type="submit" tabindex="-1" class="topnav-search-btn"><i
+                                        class="fa fa-search"></i></button>
+                            </form>
+                        </li>
+                        
+                        <li class="login-tooltip"><a
+                                href="https://devportal-csp-authenticator.esp.vmware.com/api/auth/discovery?targetUri=https%3a%2f%2fdeveloper.vmware.com/web/dp/horizon-login"
+                                id="login-trigger" style="background: none;padding-left: 10px;font-weight: normal;"
+                                target="_self"> Login </a> <span class="login-tooltiptext">Login with your VMware account (Customer Connect credentials).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="device-search">
+            <div class="device-topnav-search">
+                <form method="get" action="/search" style="width: 100%;" class="internal">
+                    <input class="topnav-search-input device" placeholder="Search" required="required" value="" name="keywords" type="text"/>
+                    <button type="submit" tabindex="-1" class="device-topnav-search-btn"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+        <div style="clear:both"></div>
+        <div id="content" class="clearfix">
+            <div id="main-content" class="generic-100">
+                
+    
+    <div class="bread-crumb-layout">
+    <div class="bread-crumb">
+        <div class="span9">
+            
+            <nav class="breadcrumb"> 
+                
+                    
+                    <span class="bdivider">&nbsp;/&nbsp;</span> <a class="breadcrumb-item active internal"
+                                                                    href="/docs" target="_self"> Documentation and Reference </a>
+                    
+                
+            </nav>
+        </div>
+        <div class="span2" style="float:right; display: none;">
+            <div class="social-links">
+                <div class="overlay-con"><a href="https://www.twitter.com/home?status=/web/tool/4.4.0/ovf"
+                                            target="_blank" rel="noopener"><i
+                        class="fa fa-twitter"></i></a>
+                    <div class="social-overlay"><i class="fa fa-twitter"></i> <a
+                            href="https://www.twitter.com/home?status=/web/tool/4.4.0/ovf"
+                            target="_blank" rel="noopener">Share</a></div>
+                </div>
+                <div class="overlay-con"><a
+                        href="https://www.facebook.com/sharer/sharer.php?u=/web/tool/4.4.0/ovf"
+                        target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
+                    <div class="social-overlay"><i class="fa fa-facebook"></i> <a
+                            href="https://www.facebook.com/sharer/sharer.php?u=/web/tool/4.4.0/ovf"
+                            target="_blank" rel="noopener">Share</a></div>
+                </div>
+                <div class="overlay-con"><a target="_blank"
+                                            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/web/tool/4.4.0/ovf&amp;title=Artifact Detail&amp;summary=&amp;source=developer.vmware.com"
+                                            rel="noopener"><i class="fa fa-linkedin"></i></a>
+                    <div class="social-overlay"><i class="fa fa-linkedin"></i> <a target="_blank"
+                                                                                  href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/web/tool/4.4.0/ovf&amp;title=Artifact Detail&amp;summary=&amp;source=developer.vmware.com"
+                                                                                  rel="noopener">Share</a>
+                    </div>
+                </div>
+                <div class="overlay-con"><a target="_blank"
+                                            href="https://plus.google.com/share?url=/web/tool/4.4.0/ovf"
+                                            rel="noopener"><i
+                        class="fa fa-google-plus"></i></a>
+                    <div class="social-overlay"><i class="fa fa-google-plus"></i> <a target="_blank"
+                                                                                     href="https://plus.google.com/share?url=/web/tool/4.4.0/ovf"
+                                                                                     rel="noopener">Share</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                <div class="row-fluid">
+                    
+    
+    <div class="portlet-column portlet-column-only span12" id="column-1">
+        <div class="portlet-dropzone portlet-column-content portlet-column-content-first" id="layout-column_column-1">
+            <div class="portlet-boundary portlet-boundary_searchResults_WAR_dpportlet_ portlet-static portlet-static-end portlet-borderless search-results-portlet"
+                 id="p_p_id_searchResults_WAR_dpportlet_">
+                <span id="p_searchResults_WAR_dpportlet"></span>
+                <div class="portlet-borderless-container">
+                    <div class="portlet-body">
+                        <div class="row-fluid">
+                            <h1 style="font-size: 30px">Documentation and Reference</h1>
+                            <p>Find API and SDK documentation, release notes, design guides, reference architectures, and other technical references for working with VMware tools, services and technologies. Whether you’re coding firmware or architecting an SDDC solution, you’ll find all the developer documents you need in one place.</p>
+                            <hr>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <form id="contextual-search" action="/docs" method="get" class="internal">
+                                        <fieldset class="search">
+                                            <div class="search-container">
+                                                <div class="search-content">
+                                                    <input type="text" name="keywords" id="keywords-search" size="30" placeholder="Search..." value="">
+                                                </div>
+                                            </div>
+
+                                            <div class="search-sidebar">
+                                                <button type="submit">
+                                                    <i class="icon-search"></i>
+                                                </button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                            </div>
+                        </div>
+
+                        <div class="row no-gutter search-results">
+                            <div class="col-md-3 col-sm-4 col-xs-12">
+                                <div id="filters">
+                                    <h2>Filters</h2>
+                                    <div class="all-filters">
+                                        
+                                            <h3>Documents<span class="expand"></span></h3>
+                                                <ul class="tag-filter collapsed">
+                                                    <li><label><input type="radio" name="sdks" value="" checked="checked">All</label></li>
+                                                    
+                                                        <li class="sub-category-list">
+                                                            <h3 class="sub-category">Cloud Management<span class="expand"></span></h3>
+                                                            <ul class="collapsed">
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VMware vRealize Automation Third Party Ipam SDK">VMware vRealize Automation Third Party Ipam SDK</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vRealize Automation">vRealize Automation</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vRealize Automation Saltstack Config Secops">vRealize Automation Saltstack Config Secops</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vRealize Automation Third Party Ipam Integration">vRealize Automation Third Party Ipam Integration</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vRealize Code Stream">vRealize Code Stream</label>
+                                                                    </li>
+                                                                
+                                                            </ul>
+                                                        </li>
+                                                    
+                                                        <li class="sub-category-list">
+                                                            <h3 class="sub-category">Compute Virtualization<span class="expand"></span></h3>
+                                                            <ul class="collapsed">
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Client">Client</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Html Console">Html Console</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Pyvmomi">Pyvmomi</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VDDK">VDDK</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN .NET">VSAN .NET</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN Java">VSAN Java</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN Perl">VSAN Perl</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN Python">VSAN Python</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN Ruby">VSAN Ruby</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Vmci Socket">Vmci Socket</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vCenter Converter">vCenter Converter</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Automation .NET">vSphere Automation .NET</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Automation Java">vSphere Automation Java</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Automation Perl">vSphere Automation Perl</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Automation Python">vSphere Automation Python</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Automation Rest">vSphere Automation Rest</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Automation Ruby">vSphere Automation Ruby</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Guest">vSphere Guest</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Management">vSphere Management</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Perl">vSphere Perl</label>
+                                                                    </li>
+                                                                
+                                                            </ul>
+                                                        </li>
+                                                    
+                                                        <li class="sub-category-list">
+                                                            <h3 class="sub-category">Desktop &amp; App Virtualization<span class="expand"></span></h3>
+                                                            <ul class="collapsed">
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="RDP VC Bridge">RDP VC Bridge</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VMware Horizon View Session Enhancement">VMware Horizon View Session Enhancement</label>
+                                                                    </li>
+                                                                
+                                                            </ul>
+                                                        </li>
+                                                    
+                                                        <li class="sub-category-list">
+                                                            <h3 class="sub-category">Digital Workspace<span class="expand"></span></h3>
+                                                            <ul class="collapsed">
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Airwatch Android">Airwatch Android</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Airwatch Ios">Airwatch Ios</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Ws1 Intelligence SDK">Ws1 Intelligence SDK</label>
+                                                                    </li>
+                                                                
+                                                            </ul>
+                                                        </li>
+                                                    
+                                                        <li class="sub-category-list">
+                                                            <h3 class="sub-category">Hyperconverged Infrastructure<span class="expand"></span></h3>
+                                                            <ul class="collapsed">
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Client">Client</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Html Console">Html Console</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Pyvmomi">Pyvmomi</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VDDK">VDDK</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN .NET">VSAN .NET</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN Java">VSAN Java</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN Perl">VSAN Perl</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN Python">VSAN Python</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN Ruby">VSAN Ruby</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Vmci Socket">Vmci Socket</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vCenter Converter">vCenter Converter</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Automation .NET">vSphere Automation .NET</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Automation Java">vSphere Automation Java</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Automation Perl">vSphere Automation Perl</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Automation Python">vSphere Automation Python</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Automation Rest">vSphere Automation Rest</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Automation Ruby">vSphere Automation Ruby</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Guest">vSphere Guest</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Management">vSphere Management</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vSphere Perl">vSphere Perl</label>
+                                                                    </li>
+                                                                
+                                                            </ul>
+                                                        </li>
+                                                    
+                                                        <li class="sub-category-list">
+                                                            <h3 class="sub-category">Multi-Cloud Operations<span class="expand"></span></h3>
+                                                            <ul class="collapsed">
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VMware vRealize Automation Third Party Ipam SDK">VMware vRealize Automation Third Party Ipam SDK</label>
+                                                                    </li>
+                                                                
+                                                            </ul>
+                                                        </li>
+                                                    
+                                                        <li class="sub-category-list">
+                                                            <h3 class="sub-category">Private &amp; Hybrid Cloud<span class="expand"></span></h3>
+                                                            <ul class="collapsed">
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Cloud Director Appliance Openyaml File">Cloud Director Appliance Openyaml File</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Cloud Director Extension">Cloud Director Extension</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Python Client For VMware Cloud On Aws">Python Client For VMware Cloud On Aws</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VMware Cloud Director Appliance Openyaml File">VMware Cloud Director Appliance Openyaml File</label>
+                                                                    </li>
+                                                                
+                                                            </ul>
+                                                        </li>
+                                                    
+                                                        <li class="sub-category-list">
+                                                            <h3 class="sub-category">Storage &amp; Availability<span class="expand"></span></h3>
+                                                            <ul class="collapsed">
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Site Recovery Manager">Site Recovery Manager</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN .NET">VSAN .NET</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN Java">VSAN Java</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN Perl">VSAN Perl</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN Python">VSAN Python</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN Ruby">VSAN Ruby</label>
+                                                                    </li>
+                                                                
+                                                            </ul>
+                                                        </li>
+                                                    
+                                                        <li class="sub-category-list">
+                                                            <h3 class="sub-category">Telco Cloud<span class="expand"></span></h3>
+                                                            <ul class="collapsed">
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Data Collector SDK Python">Data Collector SDK Python</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Data Collector Xml">Data Collector Xml</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Telco Cloud Automation Python SDK">Telco Cloud Automation Python SDK</label>
+                                                                    </li>
+                                                                
+                                                            </ul>
+                                                        </li>
+                                                    
+                                                        <li class="sub-category-list">
+                                                            <h3 class="sub-category">Virtual Cloud Networking<span class="expand"></span></h3>
+                                                            <ul class="collapsed">
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="NSX T Java">NSX T Java</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="NSX T Python">NSX T Python</label>
+                                                                    </li>
+                                                                
+                                                            </ul>
+                                                        </li>
+                                                    
+                                                        <li class="sub-category-list">
+                                                            <h3 class="sub-category">Other Platform<span class="expand"></span></h3>
+                                                            <ul class="collapsed">
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Html Console">Html Console</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="NSX T Java">NSX T Java</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="NSX T Python">NSX T Python</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="Photon Controller">Photon Controller</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VMware Cloud Disaster Recovery SDK">VMware Cloud Disaster Recovery SDK</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN .NET">VSAN .NET</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN Java">VSAN Java</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN Perl">VSAN Perl</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN Python">VSAN Python</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="VSAN Ruby">VSAN Ruby</label>
+                                                                    </li>
+                                                                
+                                                                    <li>
+                                                                        <label><input type="radio"  name="sdks" value="vRealize Automation">vRealize Automation</label>
+                                                                    </li>
+                                                                
+                                                            </ul>
+                                                        </li>
+                                                    
+                                                </ul>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-9 col-sm-8 col-xs-12">
+                                
+    
+    <div id="search-results-list">
+        
+        <div id="search-results-actions" class="row-fluid">
+            <div class="span8">
+                
+                <span id="current-page-results">1 - 10</span> of <strong>480</strong> Results
+                
+
+                
+                for
+                
+
+                
+
+                
+                <span class="search-category tag"><span>Documentation</span><a><i class="icon-remove-sign"></i></a></span>
+                
+
+                
+            </div>
+
+            <div class="span4" style="text-align: right;">
+                <div>
+                    <label style="margin-top: -7px;">
+                        <span>Sort By:</span>
+                        <select id="search-results-sort-by" data-initial-value="">
+                            <option value="score" >Popularity</option>
+                            <option value=""  selected >Relevance</option>
+                            <option value="dateDesc" >Latest First</option>
+                            <option value="dateAsc" >Oldest First</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        
+    
+    <ul class="title-list">
+        
+            <li class="title-list content">
+                <div class="row-fluid">
+                    <div class=" main-column">
+                        <a class="title" href="https://code.vmware.com">E2E-Test40</a>
+                        
+
+                        <div class="snippet"></div>
+                        
+                    </div>
+
+                    
+                </div>
+            </li>
+        
+            <li class="title-list content">
+                <div class="row-fluid">
+                    <div class=" main-column">
+                        <a class="title" href="https://code.vmware.com">E2E-Test87</a>
+                        
+
+                        <div class="snippet"></div>
+                        
+                    </div>
+
+                    
+                </div>
+            </li>
+        
+            <li class="title-list content">
+                <div class="row-fluid">
+                    <div class=" main-column">
+                        <a class="title" href="https://code.vmware.com">E2E-Test62</a>
+                        
+
+                        <div class="snippet"></div>
+                        
+                    </div>
+
+                    
+                </div>
+            </li>
+        
+            <li class="title-list content">
+                <div class="row-fluid">
+                    <div class=" main-column">
+                        <a class="title" href="https://vdc-repo.vmware.com/vmwb-repository/dcr-public/100b9ebd-0381-4517-b0e1-0f19355d866b/da97799f-2c5c-42d9-b726-c3884af879cd/Using%20App%20Volumes%202203%20REST%20APIs.pdf">App Volumes API Guide : 1.0</a>
+                        
+
+                        <div class="snippet"></div>
+                        
+                    </div>
+
+                    
+                </div>
+            </li>
+        
+            <li class="title-list content">
+                <div class="row-fluid">
+                    <div class=" main-column">
+                        <a class="title" href="https://vdc-repo.vmware.com/vmwb-repository/dcr-public/32ec351b-232a-42f7-bf22-b816e1b30315/93826100-4053-4127-b7fc-e7a3b5aa40a3/doc/index.html">Getting Started with vCloud OpenAPI : 1.0</a>
+                        
+
+                        <div class="snippet"></div>
+                        
+                    </div>
+
+                    
+                </div>
+            </li>
+        
+            <li class="title-list content">
+                <div class="row-fluid">
+                    <div class=" main-column">
+                        <a class="title" href="https://vdc-repo.vmware.com/vmwb-repository/dcr-public/5a9e1917-1c4b-4d58-8812-a444128d9361/e3dcb2d9-596f-4818-ba86-010c0b85c22c/vcloud_openapis.pdf">Getting Started with vCloud OpenAPI (PDF) : 1.0</a>
+                        
+
+                        <div class="snippet"></div>
+                        
+                    </div>
+
+                    
+                </div>
+            </li>
+        
+            <li class="title-list content">
+                <div class="row-fluid">
+                    <div class=" main-column">
+                        <a class="title" href="https://vdc-repo.vmware.com/vmwb-repository/dcr-public/94b8bd8d-74ff-4fe3-b7a4-41ae31516ed7/1b42f3b5-8b31-4279-8b3f-547f6c7c5aa8/doc/index.html">vCloud API Programming Guide for Service Providers : 1.0</a>
+                        
+
+                        <div class="snippet"></div>
+                        
+                    </div>
+
+                    
+                </div>
+            </li>
+        
+            <li class="title-list content">
+                <div class="row-fluid">
+                    <div class=" main-column">
+                        <a class="title" href="https://vdc-repo.vmware.com/vmwb-repository/dcr-public/9a5e9235-1c10-42de-8e22-291888a67544/f809467e-7164-43a0-89b3-6d7df9331297/vcloud_sp_api_guide_31_0.pdf">vCloud API Programming Guide for Service Providers (PDF) : 1.0</a>
+                        
+
+                        <div class="snippet"></div>
+                        
+                    </div>
+
+                    
+                </div>
+            </li>
+        
+            <li class="title-list content">
+                <div class="row-fluid">
+                    <div class=" main-column">
+                        <a class="title" href="https://vdc-repo.vmware.com/vmwb-repository/dcr-public/945ebc91-6a16-40c9-809d-979020aadb87/190891cc-d5c2-4660-b8c4-d97724f57728/doc/index.html">vCloud Director API for NSX Programming Guide : 1.0</a>
+                        
+
+                        <div class="snippet"></div>
+                        
+                    </div>
+
+                    
+                </div>
+            </li>
+        
+            <li class="title-list content">
+                <div class="row-fluid">
+                    <div class=" main-column">
+                        <a class="title" href="https://vdc-repo.vmware.com/vmwb-repository/dcr-public/5b09a756-302e-4cbc-98b8-3fbab0ef7e76/9ef1cf00-331a-4af5-98a6-2f5636797920/vcloud_nsx_api_guide_31_0.pdf">vCloud Director API for NSX Programming Guide (PDF) : 1.0</a>
+                        
+
+                        <div class="snippet"></div>
+                        
+                    </div>
+
+                    
+                </div>
+            </li>
+        
+    </ul>
+
+
+        
+        <div id="paginator" class="pagination pull-right">
+            <ul class="pagination bootpag">
+                <li class="prev pagination-page  disabled "><a>Previous</a></li>
+                
+                <li class="pagination-page  active "><a>1</a></li>
+                
+                <li class="pagination-page "><a>2</a></li>
+                
+                <li class="pagination-page "><a>3</a></li>
+                
+                <li class="pagination-page "><a>4</a></li>
+                
+                <li class="pagination-page "><a>5</a></li>
+                
+                <li class="pagination-page "><a>6</a></li>
+                
+                <li class="pagination-page "><a>7</a></li>
+                
+                <li class="pagination-page "><a>8</a></li>
+                
+                <li class="pagination-page "><a>9</a></li>
+                
+                <li class="pagination-page "><a>10</a></li>
+                
+                <li class="next pagination-page "><a>Next</a></li>
+            </ul>
+        </div>
+        
+
+        
+        
+    </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                </div>
+                </div>
+            </div>
+            <div class="portlet-boundary portlet-boundary_1_WAR_kaleodesignerportlet_ portlet-static portlet-static-end kaleo-designer-portlet "
+                 id="p_p_id_1_WAR_kaleodesignerportlet_"><span id="p_1_WAR_kaleodesignerportlet"></span></div>
+            <form action="#" id="hrefFm" method="post" name="hrefFm"><span></span></form>
+        </div>
+        
+    <footer>
+        <div class="gradient-hr"></div>
+        <div class="ph-footer">
+            <div class="footer-container-row ph-footer-row">
+                <div class="footer-container-col"><span> <a href="https://www.vmware.com" title="VMware Logo"
+                                                            target="_blank" class="nav-link external"
+                                                            rel="noopener"> <img alt="VMware Logo" width="134" aria-label="VMware Logo"
+                                                                                 src="/everay-assets/vmware-code-theme/images/VMware-by-Broadcom-Logo_color.svg"/> </a> </span>
+                </div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">Company</h4>
+                    <div class="footer-link-text ph-footer-col1-row2"><a
+                            href="https://www.vmware.com/download/eula.html" class="clickable external"
+                            target="_blank" rel="noopener"> End User Terms &amp; Conditions </a> <br/> <a
+                            href="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/company/vmw-modern-slavery-california-statement-2021.pdf"
+                            class="clickable external" target="_blank" rel="noopener"> California Transparency Act
+                        Statement </a> <br/> <a href="https://www.vmware.com/vmwarestore/"
+                                                class="clickable external"
+                                                target="_blank" rel="noopener">Store</a></div>
+                </div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">Support</h4>
+                    <div class="footer-link-text ph-footer-col1-row2"><a href="/support"
+                                                                         class="clickable internal" target="_self"
+                                                                         rel="noopener noreferrer">Developer Support
+                        Options</a> <br/> <a href="https://dcpn.my.site.com/login?so=00Di0000000biLz"
+                                             class="clickable internal" target="_self" rel="noopener noreferrer">DC
+                        Partner Network</a> <br/> <a href="https://docs.vmware.com/" class="clickable external"
+                                                     target="_blank" rel="noopener">Product Documentation</a> <br/>
+                        <a href="https://www.vmware.com/resources/compatibility/search.php" class="clickable external"
+                           target="_blank" rel="noopener">Compatibility Guide</a><br />
+                        <a class="feedback-trigger">Report an Issue on this Page</a></div>
+                </div>
+                <div class="footer-container-col ph-placeholder"></div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">Resources</h4>
+                    <div class="footer-link-text ph-footer-col1-row2"><a href="https://go.techzone.vmware.com/"
+                                                                         class="clickable external" target="_blank"
+                                                                         rel="noopener">VMware Tech Zone</a> <br/> <a
+                            href="https://www.vmware.com/training" class="clickable external" target="_blank"
+                            rel="noopener">Training</a> <br/> <a href="https://pathfinder.vmware.com/"
+                                                                 class="clickable external" target="_blank"
+                                                                 rel="noopener">Pathfinder</a> <br/></div>
+                </div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">VMware Social</h4>
+                    <table class="ph-footer-col4">
+                        <tbody>
+                        <tr>
+                            <td><a href="https://twitter.com/VMware" title="Twitter" target="_blank" rel="noopener"
+                                   class="ph-footer-col4-row2 external"> <i class="fa fa-twitter"></i> <span
+                                    class="social-media">Twitter</span> </a></td>
+                            <td><a href="https://www.facebook.com/vmware" title="Facebook" target="_blank"
+                                   rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                    class="fa fa-facebook-square"></i> <span
+                                    class="social-media">Facebook</span> </a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.youtube.com/user/vmwaretv" title="YouTube" target="_blank"
+                                   rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                    class="fa fa-youtube-square"></i> <span class="social-media">YouTube</span>
+                            </a></td>
+                            <td><a href="https://www.linkedin.com/company/vmware" title="LinkedIn" target="_blank"
+                                   rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                    class="fa fa-linkedin-square"></i> <span
+                                    class="social-media">LinkedIn</span> </a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="fb-links">
+                <hr class="br-black mb-90 line-size"/>
+                <span class="copy fb-links-text">Copyright © 2005-2024 Broadcom. All Rights Reserved. The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.</span> <a
+                    href="https://www.vmware.com/help/legal.html" title="Terms of Use" target="_blank"
+                    rel="noopener" class="fb-links-text external">Terms of Use</a> <a
+                    href="https://www.vmware.com/help/privacy.html" title="Privacy" target="_blank" rel="noopener"
+                    class="fb-links-text external">Privacy</a> <a
+                    href="https://www.vmware.com/help/privacy/california-privacy-rights.html"
+                    title="Your California Privacy Rights" target="_blank" rel="noopener"
+                    class="fb-links-text external">Your California Privacy Rights</a> <a
+                    href="https://www.vmware.com/help/accessibility.html" title="Accessibility" target="_blank"
+                    rel="noopener" name="&amp;lpos=nav_footer : 8&amp;le=event52,event75"
+                    class="fb-links-text external">Accessibility</a> <a
+                    href="https://www.vmware.com/help/trademarks.html" title="Trademarks" target="_blank"
+                    class="fb-links-text external" rel="noopener">Trademarks</a> <a
+                    href=" https://www.vmware.com/help.html" title="Help" target="_blank" rel="noopener noreferrer"
+                    class="fb-links-text">Help</a> <a href="https://www.vmware.com/forms/customer_feedback.html"
+                                                      title="Feedback" class="fb-links-text clickable external"
+                                                      target="_blank" rel="noopener">Feedback</a> <a
+                    href="https://www.vmware.com/company/contact_sales.html" title="Contact Sales" target="_blank"
+                    rel="noopener" class="fb-links-text external">Contact Sales</a></div>
+        </div>
+    </footer>
+
+
+        <button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie Settings</button>
+    <noscript><img src="/akam/13/pixel_6b778315?a=dD02ZjM4OGI5MjVkYmIwYzBlZWVlNGJlMjJiOWU1MTBiODNkNzY1ZTQ5JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript><script type="text/javascript"  src="/IqmVpEzabH39/EMxACt/JgC8Py/7hYa6rSLph/Zxs-fQE/NkM/hHCJ2Eik"></script></body>
+    <script src="/everay-assets/everay/js/everay-lib.js"></script>
+    </html>

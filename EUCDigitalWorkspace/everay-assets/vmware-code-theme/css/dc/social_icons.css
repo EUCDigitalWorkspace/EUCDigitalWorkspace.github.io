@@ -1,0 +1,43 @@
+.social-block {
+    float: right;
+    text-align: right;
+    width: 65%;
+    position: absolute;
+    bottom: 4px;
+    right: 10px; }
+
+.social-block a {
+    color: #fff;
+    font-size: 16px;
+    margin: 0 5px; }
+
+.social-block.invert a {
+    color: #717074; }
+
+.social-block.invert a:hover {
+    color: #0094d2; }
+
+.social-block.tw-hide .fa-twitter, .social-links-con.tw-hide .fa-twitter {
+    display: none; }
+
+.social-block.fb-hide .fa-facebook, .social-links-con.fb-hide .fa-facebook {
+    display: none; }
+
+.social-block.in-hide .fa-linkedin, .social-links-con.in-hide .fa-linkedin {
+    display: none; }
+
+.social-block.gp-hide .fa-google-plus, .social-links-con.gp-hide .fa-google-plus {
+    display: none; }
+
+.social-links-con.yt-hide .fa-youtube {
+    display: none; }
+
+.noSocial.social-block, .noSocial.social-links-con {
+    display: none; }
+
+@media (max-width: 640px) {
+    .rollover .social-block {
+        position: absolute; } }
+/*@media (min-width:1000px) and (max-width:1080px){
+.module_container .social-block{position:relative;}
+}*/

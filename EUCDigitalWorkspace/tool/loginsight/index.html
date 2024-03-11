@@ -1,0 +1,815 @@
+
+    <!DOCTYPE html>
+    <html class="vmware aui ltr" dir="ltr" lang="en-US">
+    <head>
+        <title>VMware Aria Operations for Logs Content Pack Publisher (formerly vRealize Log Insight)</title>
+        <meta content="initial-scale=1.0, width=device-width" name="viewport"/>
+        <meta name="google-site-verification" content="4sw39tzmJEJbKLHofv5AZrf3qetHBTFB_-FGLJzzP18"/>
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+        <link href="/everay-assets/vmware-code-theme/images/favicon.ico" rel="Shortcut Icon"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/aui.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/head.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/main.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/jquery.jstree.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/dc/evidon.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/dc/master.css"/>
+        <link rel="stylesheet" href="/everay-assets/dp-portlet/css/artifactDetail.css"/>
+        <link rel="stylesheet" href="/everay-assets/dp-portlet/css/searchResults.css"/>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/everay-assets/html/css/main.css"/>
+        <link rel="stylesheet" href="/everay-assets/everay/css/everay-lib.css"/>
+
+        
+    
+        <script type="text/plain" class="optanon-category-C0002">
+            window["_paq"] = window["_paq"] || [];
+            (function(a,b,c,d,e,f) {
+                window[d] = window[d] || {};
+                window[d]._q = window[d]._q || [];
+                ['identify', 'page', 'track', 'metadata', 'locale', 'theme'].forEach(function(t) {
+                    window[d][t] = function() {
+                        var e = Array.prototype.slice.call(arguments); e.unshift(t); window[d]._q.push(e);
+                    }
+                });
+                window[d]._url = c;
+                window[d].init = window[d].init || function(p,q,r) {
+                    if (!window[d].initialized) { // to ensure init is executed only once
+                        window[d]._clientId = p; window[d]._clientName = q; window[d]._configs = r || {};
+                        window[d].initialized = true;
+                        e=a.createElement(b);e.async=1;e.src=c+'?client_id='+p+'&namespace='+d;
+                        f=a.getElementsByTagName(b)[0];f.parentNode.insertBefore(e,f);
+                    }
+                };
+
+                function uuidv4() {
+                    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                        var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+                        return v.toString(16);
+                    });
+                }
+                window['identity'] = uuidv4();
+            })(document, 'script', 'https://lumos.vmware.com/assets/lumos.js', 'lumos');
+
+            lumos.init('esp-prod-133-jxoiz', 'VMware Developer');
+        </script>
+    
+
+        
+
+<script src="https://www.vmware.com/content/dam/digitalmarketing/onetrust/assets/js/jquery-1.11.0.min.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="b9242434-9feb-47be-a894-3a9e658fdd50"></script>
+<script type="text/javascript"> function OptanonWrapper() { { window.dataLayer.push({ event: 'OneTrustGroupsUpdated' }); } } </script>
+
+
+        
+    
+        <script type="text/plain" class="optanon-category-C0002" async src='https://www.googletagmanager.com/gtag/js?id=G-LZ5W0Z51BZ'></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+        </script>
+        <script type="text/plain" class="optanon-category-C0002">
+                // load google analytics script
+                gtag('js', new Date());
+                gtag('config', 'G-LZ5W0Z51BZ');
+        </script>
+    
+
+    <script >bazadebezolkohpepadr="1802994684"</script><script type="text/javascript" src="https://developer.vmware.com/akam/13/6b778314"  defer></script></head>
+
+    <body class=" yui3-skin-sam controls-visible guest-site signed-out public-page site">
+    <div id="container">
+        
+    <div class="navbar main-navbar" style="height: 60px;">
+        <div class="navbar-inner user-nav" style="background-color: #15193D!important;">
+            <div class="container">
+                <div class="device-search"><a class="no-link-anchor" id="topnav-device-close-icon"><i
+                        class="fa fa-close" style="color: #fff;font-size:20px" aria-hidden="true"></i></a> <a
+                        class="no-link-anchor" id="topnav-device-search-icon"><i class="fa fa-search"
+                                                                                    style="color: #fff;font-size:20px"
+                                                                                    aria-hidden="true"></i></a>
+                    <a id="top-nav-device-main-icon" class="btn btn-navbar collapsed"
+                       data-toggle="collapse" data-target=".navbar-responsive-collapse"> <i class="fa fa-bars"
+                                                                                            style="color: #fff;font-size:20px"></i>
+                    </a></div>
+                <div><a class="brand code_logo internal" href="/" rel="noopener" style="align-items: center;"
+                        target="_self">
+                        <div id="brand-logo-with-title-text">
+                            <img class="logo-img" src="/everay-assets/vmware-code-theme/images/VMware-by-Broadcom-Logo_white.svg" alt="vmware logo"/>
+                            <div class="brand-text">Developer</div>
+                        </div>
+                </a></div>
+                <div id="navigationHeader" class="nav-collapse navbar-responsive-collapse collapse" style="height: 0px;">
+                    <ul id="nav-header-link" class="nav">
+                        <li class="first" style="border-left: 1px solid rgba(255, 255, 255, 0.15)"><a href="/home"
+                                                                                                      target="_self">
+                            <span>Home</span> </a></li>
+                        <li><a href="https://developer.vmware.com/products" target="_self"> <span>Products</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/apis" target="_self"> <span>APIs</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/powercli" target="_self"> <span>PowerCLI</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/samples" target="_self"> <span>Code Samples</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/sdks" target="_self"> <span>SDKs</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/tools" target="_self"> <span>Tools</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/join" target="_self"><span>Join {code}</span>
+                        </a></li>
+                    </ul> 
+                    <ul class="nav pull-right" id="nav-header-items-right">
+                        <li class="desktop-search"><a class="no-link-anchor" id="topnav-search-icon"
+                                                      style="color: #FFFFFF;"><i class="fa fa-search"
+                                                                                 aria-hidden="true"></i></a>
+                            <form method="get" action="/search" id="topnav-search-form"
+                                  style="display:none;margin-left:12px;margin-top:3px;" class=" internal"><input
+                                    class="topnav-search-input" placeholder="Search VMware Developer"
+                                    type="text" required="required"
+                                    value="" name="keywords"/>
+                                <button type="submit" tabindex="-1" class="topnav-search-btn"><i
+                                        class="fa fa-search"></i></button>
+                            </form>
+                        </li>
+                        
+                        <li class="login-tooltip"><a
+                                href="https://devportal-csp-authenticator.esp.vmware.com/api/auth/discovery?targetUri=https%3a%2f%2fdeveloper.vmware.com/web/dp/horizon-login"
+                                id="login-trigger" style="background: none;padding-left: 10px;font-weight: normal;"
+                                target="_self"> Login </a> <span class="login-tooltiptext">Login with your VMware account (Customer Connect credentials).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="device-search">
+            <div class="device-topnav-search">
+                <form method="get" action="/search" style="width: 100%;" class="internal">
+                    <input class="topnav-search-input device" placeholder="Search" required="required" value="" name="keywords" type="text"/>
+                    <button type="submit" tabindex="-1" class="device-topnav-search-btn"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+        <div style="clear:both"></div>
+        <div id="content" class="clearfix">
+            <div id="main-content" class="generic-100">
+                
+    
+    <div class="bread-crumb-layout">
+    <div class="bread-crumb">
+        <div class="span9">
+            
+            <nav class="breadcrumb"> 
+                
+                    
+                    <span class="bdivider">&nbsp;/&nbsp;</span> <a class="breadcrumb-item internal"
+                                                                href="https://developer.vmware.com/tools" target="_self"> Tools </a>
+                    
+                
+                    
+                    <span class="bdivider">&nbsp;/&nbsp;</span> <a class="breadcrumb-item active internal"
+                                                                    href="https://developer.vmware.com/tools" target="_self"> VMware Aria Operations for Logs Content Pack Publisher (formerly vRealize Log Insight) </a>
+                    
+                
+            </nav>
+        </div>
+        <div class="span2" style="float:right; display: none;">
+            <div class="social-links">
+                <div class="overlay-con"><a href="https://www.twitter.com/home?status=/web/tool/4.4.0/ovf"
+                                            target="_blank" rel="noopener"><i
+                        class="fa fa-twitter"></i></a>
+                    <div class="social-overlay"><i class="fa fa-twitter"></i> <a
+                            href="https://www.twitter.com/home?status=/web/tool/4.4.0/ovf"
+                            target="_blank" rel="noopener">Share</a></div>
+                </div>
+                <div class="overlay-con"><a
+                        href="https://www.facebook.com/sharer/sharer.php?u=/web/tool/4.4.0/ovf"
+                        target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
+                    <div class="social-overlay"><i class="fa fa-facebook"></i> <a
+                            href="https://www.facebook.com/sharer/sharer.php?u=/web/tool/4.4.0/ovf"
+                            target="_blank" rel="noopener">Share</a></div>
+                </div>
+                <div class="overlay-con"><a target="_blank"
+                                            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/web/tool/4.4.0/ovf&amp;title=Artifact Detail&amp;summary=&amp;source=developer.vmware.com"
+                                            rel="noopener"><i class="fa fa-linkedin"></i></a>
+                    <div class="social-overlay"><i class="fa fa-linkedin"></i> <a target="_blank"
+                                                                                  href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/web/tool/4.4.0/ovf&amp;title=Artifact Detail&amp;summary=&amp;source=developer.vmware.com"
+                                                                                  rel="noopener">Share</a>
+                    </div>
+                </div>
+                <div class="overlay-con"><a target="_blank"
+                                            href="https://plus.google.com/share?url=/web/tool/4.4.0/ovf"
+                                            rel="noopener"><i
+                        class="fa fa-google-plus"></i></a>
+                    <div class="social-overlay"><i class="fa fa-google-plus"></i> <a target="_blank"
+                                                                                     href="https://plus.google.com/share?url=/web/tool/4.4.0/ovf"
+                                                                                     rel="noopener">Share</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                <div class="row-fluid">
+                    
+    
+    <div class="portlet-column portlet-column-only span12" id="column-1">
+    <div class="portlet-dropzone portlet-column-content portlet-column-content-first"
+         id="layout-column_column-1">
+        <div class="portlet-boundary portlet-boundary_artifactdetail_WAR_dpportlet_ portlet-static portlet-static-end artifact-detail-portlet "
+             id="p_p_id_artifactdetail_WAR_dpportlet_">
+            <span id="p_artifactdetail_WAR_dpportlet"></span>
+            <div class="portlet-borderless-container" style="">
+                <div class="portlet-body"> 
+                    
+                    <div class="artifact-header">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td><h1 class="artifact-name">VMware Aria Operations for Logs Content Pack Publisher (formerly vRealize Log Insight)</h1></td>
+                                <td class="versions">
+                                    <select name="forma" onchange="location = this.value;">
+                                        
+                                        <option value="/web/tool/3.1/loginsight"  selected="selected"> 3.1</option>
+                                        
+                                    </select>
+                                </td>
+                                <td style="vertical-align: middle;"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row-fluid">
+
+                    <div class="span9">
+                        <div class="webcontent">
+                            
+                                <p><img src="https://code.vmware.com/documents/10180/0/li-graphic.png/cebb4a30-dbb3-40c4-9cf7-49369a193322?t=1389395071000" /></p>
+
+<p>VMware Aria Operations for Logs delivers automated log management through aggregation, analytics and search, enabling operational intelligence and enterprise-wide visibility in dynamic hybrid cloud environments. Content Packs are plugins that provide pre-defined knowledge about specific types of events such as log messages. A content pack is made up of information that can be saved from either the Dashboards or Interactive Analytics pages.</p>
+
+<p><img src="https://code.vmware.com/documents/10180/0/pyra.png/0ae17f6e-8cfe-426d-be1c-1923b69b922b?t=13711201528713" /></p>
+
+<h3><strong>Key Benefits</strong></h3>
+
+<ul>
+	<li>Creating Content Packs is as simple as using&nbsp;VMware Aria Operations for Logs</li>
+	<li>VMware Aria Operations for Logs users can create a content pack for private or public consumption</li>
+	<li>Distribute to your users to improve their experience</li>
+	<li>Avoid help desk calls by including solutions and links to online help</li>
+	<li>VMware partners can upload their Content Packs on&nbsp;<a href="https://solutionexchange.vmware.com/store/loginsight" style="color: rgb(0, 105, 144);" target="_blank">Solution Exchange</a>&nbsp;and on our&nbsp;<a href="http://www.youtube.com/user/vmloginsight" style="color: rgb(0, 105, 144);" target="_blank">YouTube channel</a></li>
+</ul>
+
+<p><a href="https://code.vmware.com/web/dp/programs/how-to-join-a-program" style="color: rgb(0, 105, 144);" target="_blank">Join VMware&#39;s Ecosystem and Solution Engineering Partner Program&nbsp;</a>and get hands on help from our professional services team while creating your VMware Aria Operations for Logs&nbsp;Content Pack (free for all TAP members)</p>
+
+<p></p>
+
+<h3><strong>VMware Aria Operations for Logs Version for Content Pack Authors</strong></h3>
+
+<p>To ensure version compatibility with future releases of VMware Aria Operations for Logs, and to provide access to the most advanced content pack features, please download VMware Aria Operations for Logs via the link below. Please be aware that any downloads from this site provides a 60 day license.&nbsp;Permanent developer licenses are available through TAP, and are applied to Log Insight versions once posted on Developers Center as fully released (General Availability).&nbsp;<strong>&nbsp;</strong></p>
+
+<p><a href="http://www.vmware.com/go/loginsight/get" style="color: rgb(0, 105, 144);" target="_blank">http://www.vmware.com/go/loginsight/get</a></p>
+
+<p>
+<video controls="" height="600" width="800">&nbsp;&nbsp;<source src="https://vdc-download.vmware.com/vmwb-repository/dcr-public/063fac1e-3507-4cf5-890a-8f1df53b588b/6f7226c4-a451-40d3-93e1-c1197d0cb74d/BuildingLogInsightContentPacks.mp4" type="video/mp4" /></video>
+</p>
+
+                            
+                        </div>
+                        <div id="tags">
+                            
+                            <p>
+                                <b>Tags:</b>
+                                
+                                <a href="https://developer.vmware.com/web/dp/search?tags=cloud" target="_self"><span>cloud</span></a>
+                                
+                            </p>
+                            
+                        </div>
+                        
+                        <div id="download" class="private-download">
+                                
+                                        
+                                            
+                                                <h3><span>1</span>Downloads</h3>
+                                            
+                                                <p>By downloading, installing, or using the Software, you agree to be bound by the terms of VMware’s Software Development Kit License Agreement unless there is a different license provided in or specifically referenced by the downloaded file or package. If you disagree with any terms of the agreement, then do not use the Software.</p>
+                                            
+                                            <div class="downloads-for-artifacts">
+                                            <div class="lfr-search-container ">
+                                                <div id="_artifactdetail_WAR_dpportlet_artifactsSearchContainerSearchContainer">
+                                                    <table class="table table-bordered table-hover table-striped">
+                                                        <thead class="table-columns">
+                                                        <tr>
+                                                            <th class="table-first-header"
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-name">
+                                                                Name
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-version">
+                                                                Version
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-size">
+                                                                Size
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-md5">
+                                                                MD5
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-5">
+                                                                &nbsp;
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-6">
+                                                                &nbsp;
+                                                            </th>
+                                                            <th class="table-last-header"
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-7">
+                                                                &nbsp;
+                                                            </th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody class="table-data">
+                                                        
+                                                        <tr class=" ">
+                                                            <td class="table-cell first">
+                                                                
+                                                                <span
+                                                                    id="doc-187"
+                                                                    title="VMware Aria Operations for Logs Content Pack Publisher (formerly vRealize Log Insight)"> VMware Aria Operations for Logs Content Pack Publisher (formerly vRealize Log Insight)</span>
+                                                                
+                                                            </td>
+                                                            <td class="table-cell "> 3.1</td>
+                                                            <td class="table-cell "> 13.6  MB</td>
+                                                            <td class="table-cell "> 7f4098e9c608813b0c13332e9ab8c144</td>
+                                                            <td class="table-cell documentation"> &nbsp;
+                                                            </td>
+                                                            <td class="table-cell download"><a
+                                                                    href="https://vdc-download.vmware.com/vmwb-repository/dcr-public/f60d8ec0-54ee-4f17-a290-0e52865e7eef/2d368a00-1407-4f0e-aedd-be61dbc1d6ef/ContentPackPublisher-3.1-distribution.zip"
+                                                                    class="btn displayEula internal"
+                                                                    target="_self">Download</a></td>
+                                                            <td class="table-cell last"></td>
+                                                        </tr>
+                                                        
+                                                        <tr class="lfr-template">
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                
+                        </div>
+                        <div id="documentation">
+                            
+                                
+                                    
+                                    <h3><span>2</span>Documentation and Reference</h3>
+                                    <div class="documents-for-artifacts">
+                                        <div class="grouped-downloads">
+                                            <div class="lfr-search-container ">
+                                                <div id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_1SearchContainer">
+                                                    <table class="table table-bordered table-hover table-striped">
+                                                        <thead class="table-columns">
+                                                        <tr>
+                                                            <th class="table-first-header"
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_1_col-name">
+                                                                Name
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_1_col-size">
+                                                                Size
+                                                            </th>
+                                                            <th class="table-last-header"
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_1_col-3">
+                                                                &nbsp;
+                                                            </th>
+                                                        </tr>
+                                                        </thead>
+                                                        
+                                                            
+                                                                <tbody class="category-row">
+                                                                    <tr>
+                                                                        <td colspan="100">Miscellaneous </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://vdc-download.vmware.com/vmwb-repository/dcr-public/031cf445-b28f-41ee-8a85-a5418b6db03e/9e2db8e7-5a7d-4635-92ec-1fa4e4e0e049/Intro%20to%20vRealize%20Log%20Insight%20Content%20Packs%20v1.pdf"
+                                                                                data-tracking-name="Introduction to vRealize Log Insight Content Packs - May 2019"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            Introduction to vRealize Log Insight Content Packs - May 2019
+                                                                        </a>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell ">1.0  MB</td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://vdc-download.vmware.com/vmwb-repository/dcr-public/e6fd9962-9a1f-4d57-be4e-7e1b32bade1c/ac08596e-ca8d-4125-be65-d2596abaeabc/Log%20Insight%20Partner%20Webinar%20Slides-2014-04-29.pdf"
+                                                                                data-tracking-name="Log Insight Partner Webinar Slides"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            Log Insight Partner Webinar Slides
+                                                                        </a>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell ">915.6  KB</td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                        
+                                                            
+                                                                <tbody class="category-row">
+                                                                    <tr>
+                                                                        <td colspan="100">Program Guides </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://vdc-download.vmware.com/vmwb-repository/dcr-public/160cd6b6-2585-4996-b3a6-37759eb47b69/51bf6f7e-4557-4384-bfbd-42638b5dac44/vRealize%20Log%20Insight%20Program%20Guide%20v1.04%20%281%29.pdf"
+                                                                                data-tracking-name="vRealize Log Insight Program Guide v1.04"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            vRealize Log Insight Program Guide v1.04
+                                                                        </a>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell ">613.1  KB</td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                        
+                                                            
+                                                                <tbody class="category-row">
+                                                                    <tr>
+                                                                        <td colspan="100">Reference Guides </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://vdc-download.vmware.com/vmwb-repository/dcr-public/3abd146a-fa66-422c-8d8d-4f60540effc6/5bdc37c1-fe96-419b-93d7-065c5e3ec41b/Creating_content_packs_in_vRLI4_5_v5.pdf"
+                                                                                data-tracking-name="Creating Content Packs in vRealize Log Insight"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            Creating Content Packs in vRealize Log Insight
+                                                                        </a>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell ">3.2  MB</td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                        
+                                                            
+                                                                <tbody class="category-row">
+                                                                    <tr>
+                                                                        <td colspan="100">Training Materials </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://vdc-download.vmware.com/vmwb-repository/dcr-public/063fac1e-3507-4cf5-890a-8f1df53b588b/6f7226c4-a451-40d3-93e1-c1197d0cb74d/BuildingLogInsightContentPacks.mp4"
+                                                                                data-tracking-name="Designing and Building Log Insight Content Packs"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            Designing and Building Log Insight Content Packs
+                                                                        </a>
+                                                                        
+                                                                        <button
+                                                                                class="play-button"
+                                                                                data-video-src="https://vdc-download.vmware.com/vmwb-repository/dcr-public/063fac1e-3507-4cf5-890a-8f1df53b588b/6f7226c4-a451-40d3-93e1-c1197d0cb74d/BuildingLogInsightContentPacks.mp4">
+                                                                            PLAY
+                                                                        </button>
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell ">29.8  MB</td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://vdc-download.vmware.com/vmwb-repository/dcr-public/4b2477c3-7bbd-4da3-bca2-15a60464e5a7/4125570b-858b-4a96-a11c-78e130e7ebe1/Log%20Insight%20Partner%20Program%20Webinar-2014-04-29.mp4"
+                                                                                data-tracking-name="Log Insight Partner Program Webinar"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            Log Insight Partner Program Webinar
+                                                                        </a>
+                                                                        
+                                                                        <button
+                                                                                class="play-button"
+                                                                                data-video-src="https://vdc-download.vmware.com/vmwb-repository/dcr-public/4b2477c3-7bbd-4da3-bca2-15a60464e5a7/4125570b-858b-4a96-a11c-78e130e7ebe1/Log%20Insight%20Partner%20Program%20Webinar-2014-04-29.mp4">
+                                                                            PLAY
+                                                                        </button>
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell ">11.1  MB</td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://youtu.be/LMDcXCWBa1o"
+                                                                                data-tracking-name="VMware vRealize Log Insight Agent Install and Configuration"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            VMware vRealize Log Insight Agent Install and Configuration
+                                                                        </a>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell "></td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                        
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                       </div>
+                                    </div>
+                                
+                            
+
+                        </div>
+
+                        
+                    </div>
+                    <div class="span3">
+                        
+                            
+    
+        <div class="related-resources">
+    <div class="portlet-boundary portlet-static portlet-static-end portlet-journal-content ">
+        <span></span>
+        <section class="portlet">
+            <header class="portlet-topper"><h1 class="portlet-title"><span
+                    class="portlet-title-text">Related Resources</span>
+            </h1>
+                <menu class="portlet-topper-toolbar" type="toolbar"></menu>
+            </header>
+            <div class="portlet-content">
+                <div class=" portlet-content-container" style="">
+                    <div class="portlet-body">
+                        <div class="journal-content-article">
+                            <strong></strong>
+                            <ul class="links">
+                                
+                                <li>
+                                    <a href="https://code.vmware.com/forums/5400/vrealize-log-insight-support"
+                                       target="_blank"
+                                       rel="noopener">vRealize Log Insight Support Forum
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="https://code.vmware.com/web/dp/programs/management/vrealize-loginsight"
+                                       target="_blank"
+                                       rel="noopener">vRealize Log Insight Program
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="https://my.vmware.com/web/vmware/evalcenter?p=log-insight"
+                                       target="_blank"
+                                       rel="noopener">Try vRealize Log Insight
+                                    </a>
+                                </li>
+                                
+
+                            </ul>
+                        </div>
+                        <div class="entry-links"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+    
+
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div id="videoModalOverlay"></div>
+<div id="videoModal">
+    <span id="closeModalBtn"></span>
+    <div id="videoModalContent">
+        <video id="videoPlayer" preload="metadata" controls>
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+                </div>
+                </div>
+            </div>
+            <div class="portlet-boundary portlet-boundary_1_WAR_kaleodesignerportlet_ portlet-static portlet-static-end kaleo-designer-portlet "
+                 id="p_p_id_1_WAR_kaleodesignerportlet_"><span id="p_1_WAR_kaleodesignerportlet"></span></div>
+            <form action="#" id="hrefFm" method="post" name="hrefFm"><span></span></form>
+        </div>
+        
+    <footer>
+        <div class="gradient-hr"></div>
+        <div class="ph-footer">
+            <div class="footer-container-row ph-footer-row">
+                <div class="footer-container-col"><span> <a href="https://www.vmware.com" title="VMware Logo"
+                                                            target="_blank" class="nav-link external"
+                                                            rel="noopener"> <img alt="VMware Logo" width="134" aria-label="VMware Logo"
+                                                                                 src="/everay-assets/vmware-code-theme/images/VMware-by-Broadcom-Logo_color.svg"/> </a> </span>
+                </div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">Company</h4>
+                    <div class="footer-link-text ph-footer-col1-row2"><a
+                            href="https://www.vmware.com/download/eula.html" class="clickable external"
+                            target="_blank" rel="noopener"> End User Terms &amp; Conditions </a> <br/> <a
+                            href="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/company/vmw-modern-slavery-california-statement-2021.pdf"
+                            class="clickable external" target="_blank" rel="noopener"> California Transparency Act
+                        Statement </a> <br/> <a href="https://www.vmware.com/vmwarestore/"
+                                                class="clickable external"
+                                                target="_blank" rel="noopener">Store</a></div>
+                </div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">Support</h4>
+                    <div class="footer-link-text ph-footer-col1-row2"><a href="https://developer.vmware.com/support"
+                                                                         class="clickable internal" target="_self"
+                                                                         rel="noopener noreferrer">Developer Support
+                        Options</a> <br/> <a href="https://dcpn.my.site.com/login?so=00Di0000000biLz"
+                                             class="clickable internal" target="_self" rel="noopener noreferrer">DC
+                        Partner Network</a> <br/> <a href="https://docs.vmware.com/" class="clickable external"
+                                                     target="_blank" rel="noopener">Product Documentation</a> <br/>
+                        <a href="https://www.vmware.com/resources/compatibility/search.php" class="clickable external"
+                           target="_blank" rel="noopener">Compatibility Guide</a><br />
+                        <a class="feedback-trigger">Report an Issue on this Page</a></div>
+                </div>
+                <div class="footer-container-col ph-placeholder"></div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">Resources</h4>
+                    <div class="footer-link-text ph-footer-col1-row2"><a href="https://go.techzone.vmware.com/"
+                                                                         class="clickable external" target="_blank"
+                                                                         rel="noopener">VMware Tech Zone</a> <br/> <a
+                            href="https://www.vmware.com/training" class="clickable external" target="_blank"
+                            rel="noopener">Training</a> <br/> <a href="https://pathfinder.vmware.com/"
+                                                                 class="clickable external" target="_blank"
+                                                                 rel="noopener">Pathfinder</a> <br/></div>
+                </div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">VMware Social</h4>
+                    <table class="ph-footer-col4">
+                        <tbody>
+                        <tr>
+                            <td><a href="https://twitter.com/VMware" title="Twitter" target="_blank" rel="noopener"
+                                   class="ph-footer-col4-row2 external"> <i class="fa fa-twitter"></i> <span
+                                    class="social-media">Twitter</span> </a></td>
+                            <td><a href="https://www.facebook.com/vmware" title="Facebook" target="_blank"
+                                   rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                    class="fa fa-facebook-square"></i> <span
+                                    class="social-media">Facebook</span> </a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.youtube.com/user/vmwaretv" title="YouTube" target="_blank"
+                                   rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                    class="fa fa-youtube-square"></i> <span class="social-media">YouTube</span>
+                            </a></td>
+                            <td><a href="https://www.linkedin.com/company/vmware" title="LinkedIn" target="_blank"
+                                   rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                    class="fa fa-linkedin-square"></i> <span
+                                    class="social-media">LinkedIn</span> </a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="fb-links">
+                <hr class="br-black mb-90 line-size"/>
+                <span class="copy fb-links-text">Copyright © 2005-2024 Broadcom. All Rights Reserved. The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.</span> <a
+                    href="https://www.vmware.com/help/legal.html" title="Terms of Use" target="_blank"
+                    rel="noopener" class="fb-links-text external">Terms of Use</a> <a
+                    href="https://www.vmware.com/help/privacy.html" title="Privacy" target="_blank" rel="noopener"
+                    class="fb-links-text external">Privacy</a> <a
+                    href="https://www.vmware.com/help/privacy/california-privacy-rights.html"
+                    title="Your California Privacy Rights" target="_blank" rel="noopener"
+                    class="fb-links-text external">Your California Privacy Rights</a> <a
+                    href="https://www.vmware.com/help/accessibility.html" title="Accessibility" target="_blank"
+                    rel="noopener" name="&amp;lpos=nav_footer : 8&amp;le=event52,event75"
+                    class="fb-links-text external">Accessibility</a> <a
+                    href="https://www.vmware.com/help/trademarks.html" title="Trademarks" target="_blank"
+                    class="fb-links-text external" rel="noopener">Trademarks</a> <a
+                    href=" https://www.vmware.com/help.html" title="Help" target="_blank" rel="noopener noreferrer"
+                    class="fb-links-text">Help</a> <a href="https://www.vmware.com/forms/customer_feedback.html"
+                                                      title="Feedback" class="fb-links-text clickable external"
+                                                      target="_blank" rel="noopener">Feedback</a> <a
+                    href="https://www.vmware.com/company/contact_sales.html" title="Contact Sales" target="_blank"
+                    rel="noopener" class="fb-links-text external">Contact Sales</a></div>
+        </div>
+    </footer>
+
+
+        <button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie Settings</button>
+    <noscript><img src="https://developer.vmware.com/akam/13/pixel_6b778314?a=dD02ZjM4OGI5MjVkYmIwYzBlZWVlNGJlMjJiOWU1MTBiODNkNzY1ZTQ5JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript><script type="text/javascript"  src="/IqmVpEzabH39/EMxACt/JgC8Py/7hYa6rSLph/Zxs-fQE/Ol9/1KTBMLy0"></script></body>
+    <script src="/everay-assets/everay/js/everay-lib.js"></script>
+    </html>

@@ -1,0 +1,128 @@
+#tags {
+    padding-top: 15px;
+}
+
+#tags span {
+    border-right: 1px solid #e6e6e6;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.last {
+    border-right: 0px !important;
+}
+
+#download,
+#documentation,
+#samples,
+#sdkTab,
+#documentationTab {
+    padding: 5px 0px;
+}
+
+#download > h3,
+#documentation > h3,
+#samples > h3 {
+    border-top: 3px solid #E6E6E6;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+#download > h3 > span,
+#documentation > h3 > span,
+#samples > h3 > span {
+    background: none repeat scroll 0 0 #89CBDF;
+    color: #FFFFFF;
+    margin-right: 10px;
+    padding: 4px 15px;
+}
+
+div.portlet-borderless-container div.portlet-body h1 {
+    font-size: 40px;
+    padding: 5px 0;
+}
+
+div.artifact-header {
+    border-bottom: 3px solid #E6E6E6;
+    margin: 10px 0px 30px 0px;
+}
+
+div.artifact-header table {
+    margin-bottom: 30px;
+}
+
+
+div.artifact-header td {
+    vertical-align: bottom;
+}
+
+div.artifact-header h1 {
+    margin: 0px;
+    padding: 0px !important;
+}
+
+div.artifact-header .versions select, div.artifact-header .versions span {
+    font-size: 22px;
+    font-family: proxima-nova;
+    font-weight: 500;
+    color: #555;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    height: 35px;
+}
+
+.related-resources span.portlet-title-text {
+    padding-left: 10px;
+}
+
+.artifact-header .edit-container {
+    text-align: right;
+    font-size: x-large;
+}
+
+.artifact-header .edit-container a{
+    color: green;
+}
+
+.artifact-header a.edit-artifact {
+    margin-left: 30px !important;
+    background: #318700 !important;
+}
+
+body.controls-visible .artifact-header a.edit-artifact {
+    display: block;
+}
+
+body.controls-hidden .artifact-header a.edit-artifact {
+    display: none;
+}
+
+#forum-link {
+    margin: 0 0 20px 12px;
+    padding-bottom: 15px;
+}
+
+#forum-link a {
+    display: block;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+td.table-cell.last a {
+    display: none;
+}
+
+.cert-step-number {
+    background: none repeat scroll 0 0 #89CBDF;
+    color: #FFFFFF;
+    margin-right: 10px;
+    padding: 4px 15px;
+    font-size: 24px;
+    font-weight: normal;
+    font-weight: 300;
+}

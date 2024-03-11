@@ -1,0 +1,760 @@
+
+    <!DOCTYPE html>
+    <html class="vmware aui ltr" dir="ltr" lang="en-US">
+    <head>
+        <title>vRealize CloudClient</title>
+        <meta content="initial-scale=1.0, width=device-width" name="viewport"/>
+        <meta name="google-site-verification" content="4sw39tzmJEJbKLHofv5AZrf3qetHBTFB_-FGLJzzP18"/>
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+        <link href="/everay-assets/vmware-code-theme/images/favicon.ico" rel="Shortcut Icon"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/aui.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/head.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/main.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/jquery.jstree.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/dc/evidon.css"/>
+        <link rel="stylesheet" href="/everay-assets/vmware-code-theme/css/dc/master.css"/>
+        <link rel="stylesheet" href="/everay-assets/dp-portlet/css/artifactDetail.css"/>
+        <link rel="stylesheet" href="/everay-assets/dp-portlet/css/searchResults.css"/>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/everay-assets/html/css/main.css"/>
+        <link rel="stylesheet" href="/everay-assets/everay/css/everay-lib.css"/>
+
+        
+    
+        <script type="text/plain" class="optanon-category-C0002">
+            window["_paq"] = window["_paq"] || [];
+            (function(a,b,c,d,e,f) {
+                window[d] = window[d] || {};
+                window[d]._q = window[d]._q || [];
+                ['identify', 'page', 'track', 'metadata', 'locale', 'theme'].forEach(function(t) {
+                    window[d][t] = function() {
+                        var e = Array.prototype.slice.call(arguments); e.unshift(t); window[d]._q.push(e);
+                    }
+                });
+                window[d]._url = c;
+                window[d].init = window[d].init || function(p,q,r) {
+                    if (!window[d].initialized) { // to ensure init is executed only once
+                        window[d]._clientId = p; window[d]._clientName = q; window[d]._configs = r || {};
+                        window[d].initialized = true;
+                        e=a.createElement(b);e.async=1;e.src=c+'?client_id='+p+'&namespace='+d;
+                        f=a.getElementsByTagName(b)[0];f.parentNode.insertBefore(e,f);
+                    }
+                };
+
+                function uuidv4() {
+                    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                        var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+                        return v.toString(16);
+                    });
+                }
+                window['identity'] = uuidv4();
+            })(document, 'script', 'https://lumos.vmware.com/assets/lumos.js', 'lumos');
+
+            lumos.init('esp-prod-133-jxoiz', 'VMware Developer');
+        </script>
+    
+
+        
+
+<script src="https://www.vmware.com/content/dam/digitalmarketing/onetrust/assets/js/jquery-1.11.0.min.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="b9242434-9feb-47be-a894-3a9e658fdd50"></script>
+<script type="text/javascript"> function OptanonWrapper() { { window.dataLayer.push({ event: 'OneTrustGroupsUpdated' }); } } </script>
+
+
+        
+    
+        <script type="text/plain" class="optanon-category-C0002" async src='https://www.googletagmanager.com/gtag/js?id=G-LZ5W0Z51BZ'></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+        </script>
+        <script type="text/plain" class="optanon-category-C0002">
+                // load google analytics script
+                gtag('js', new Date());
+                gtag('config', 'G-LZ5W0Z51BZ');
+        </script>
+    
+
+    <script >bazadebezolkohpepadr="1802994684"</script><script type="text/javascript" src="https://developer.vmware.com/akam/13/6b778315"  defer></script></head>
+
+    <body class=" yui3-skin-sam controls-visible guest-site signed-out public-page site">
+    <div id="container">
+        
+    <div class="navbar main-navbar" style="height: 60px;">
+        <div class="navbar-inner user-nav" style="background-color: #15193D!important;">
+            <div class="container">
+                <div class="device-search"><a class="no-link-anchor" id="topnav-device-close-icon"><i
+                        class="fa fa-close" style="color: #fff;font-size:20px" aria-hidden="true"></i></a> <a
+                        class="no-link-anchor" id="topnav-device-search-icon"><i class="fa fa-search"
+                                                                                    style="color: #fff;font-size:20px"
+                                                                                    aria-hidden="true"></i></a>
+                    <a id="top-nav-device-main-icon" class="btn btn-navbar collapsed"
+                       data-toggle="collapse" data-target=".navbar-responsive-collapse"> <i class="fa fa-bars"
+                                                                                            style="color: #fff;font-size:20px"></i>
+                    </a></div>
+                <div><a class="brand code_logo internal" href="/" rel="noopener" style="align-items: center;"
+                        target="_self">
+                        <div id="brand-logo-with-title-text">
+                            <img class="logo-img" src="/everay-assets/vmware-code-theme/images/VMware-by-Broadcom-Logo_white.svg" alt="vmware logo"/>
+                            <div class="brand-text">Developer</div>
+                        </div>
+                </a></div>
+                <div id="navigationHeader" class="nav-collapse navbar-responsive-collapse collapse" style="height: 0px;">
+                    <ul id="nav-header-link" class="nav">
+                        <li class="first" style="border-left: 1px solid rgba(255, 255, 255, 0.15)"><a href="/home"
+                                                                                                      target="_self">
+                            <span>Home</span> </a></li>
+                        <li><a href="https://developer.vmware.com/products" target="_self"> <span>Products</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/apis" target="_self"> <span>APIs</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/powercli" target="_self"> <span>PowerCLI</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/samples" target="_self"> <span>Code Samples</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/sdks" target="_self"> <span>SDKs</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/tools" target="_self"> <span>Tools</span>
+                        </a></li>
+                        <li><a href="https://developer.vmware.com/join" target="_self"><span>Join {code}</span>
+                        </a></li>
+                    </ul> 
+                    <ul class="nav pull-right" id="nav-header-items-right">
+                        <li class="desktop-search"><a class="no-link-anchor" id="topnav-search-icon"
+                                                      style="color: #FFFFFF;"><i class="fa fa-search"
+                                                                                 aria-hidden="true"></i></a>
+                            <form method="get" action="/search" id="topnav-search-form"
+                                  style="display:none;margin-left:12px;margin-top:3px;" class=" internal"><input
+                                    class="topnav-search-input" placeholder="Search VMware Developer"
+                                    type="text" required="required"
+                                    value="" name="keywords"/>
+                                <button type="submit" tabindex="-1" class="topnav-search-btn"><i
+                                        class="fa fa-search"></i></button>
+                            </form>
+                        </li>
+                        
+                        <li class="login-tooltip"><a
+                                href="https://devportal-csp-authenticator.esp.vmware.com/api/auth/discovery?targetUri=https%3a%2f%2fdeveloper.vmware.com/web/dp/horizon-login"
+                                id="login-trigger" style="background: none;padding-left: 10px;font-weight: normal;"
+                                target="_self"> Login </a> <span class="login-tooltiptext">Login with your VMware account (Customer Connect credentials).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="device-search">
+            <div class="device-topnav-search">
+                <form method="get" action="/search" style="width: 100%;" class="internal">
+                    <input class="topnav-search-input device" placeholder="Search" required="required" value="" name="keywords" type="text"/>
+                    <button type="submit" tabindex="-1" class="device-topnav-search-btn"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+        <div style="clear:both"></div>
+        <div id="content" class="clearfix">
+            <div id="main-content" class="generic-100">
+                
+    
+    <div class="bread-crumb-layout">
+    <div class="bread-crumb">
+        <div class="span9">
+            
+            <nav class="breadcrumb"> 
+                
+                    
+                    <span class="bdivider">&nbsp;/&nbsp;</span> <a class="breadcrumb-item internal"
+                                                                href="https://developer.vmware.com/tools" target="_self"> Tools </a>
+                    
+                
+                    
+                    <span class="bdivider">&nbsp;/&nbsp;</span> <a class="breadcrumb-item active internal"
+                                                                    href="https://developer.vmware.com/tools" target="_self"> vRealize CloudClient </a>
+                    
+                
+            </nav>
+        </div>
+        <div class="span2" style="float:right; display: none;">
+            <div class="social-links">
+                <div class="overlay-con"><a href="https://www.twitter.com/home?status=/web/tool/4.4.0/ovf"
+                                            target="_blank" rel="noopener"><i
+                        class="fa fa-twitter"></i></a>
+                    <div class="social-overlay"><i class="fa fa-twitter"></i> <a
+                            href="https://www.twitter.com/home?status=/web/tool/4.4.0/ovf"
+                            target="_blank" rel="noopener">Share</a></div>
+                </div>
+                <div class="overlay-con"><a
+                        href="https://www.facebook.com/sharer/sharer.php?u=/web/tool/4.4.0/ovf"
+                        target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
+                    <div class="social-overlay"><i class="fa fa-facebook"></i> <a
+                            href="https://www.facebook.com/sharer/sharer.php?u=/web/tool/4.4.0/ovf"
+                            target="_blank" rel="noopener">Share</a></div>
+                </div>
+                <div class="overlay-con"><a target="_blank"
+                                            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/web/tool/4.4.0/ovf&amp;title=Artifact Detail&amp;summary=&amp;source=developer.vmware.com"
+                                            rel="noopener"><i class="fa fa-linkedin"></i></a>
+                    <div class="social-overlay"><i class="fa fa-linkedin"></i> <a target="_blank"
+                                                                                  href="https://www.linkedin.com/shareArticle?mini=true&amp;url=/web/tool/4.4.0/ovf&amp;title=Artifact Detail&amp;summary=&amp;source=developer.vmware.com"
+                                                                                  rel="noopener">Share</a>
+                    </div>
+                </div>
+                <div class="overlay-con"><a target="_blank"
+                                            href="https://plus.google.com/share?url=/web/tool/4.4.0/ovf"
+                                            rel="noopener"><i
+                        class="fa fa-google-plus"></i></a>
+                    <div class="social-overlay"><i class="fa fa-google-plus"></i> <a target="_blank"
+                                                                                     href="https://plus.google.com/share?url=/web/tool/4.4.0/ovf"
+                                                                                     rel="noopener">Share</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                <div class="row-fluid">
+                    
+    
+    <div class="portlet-column portlet-column-only span12" id="column-1">
+    <div class="portlet-dropzone portlet-column-content portlet-column-content-first"
+         id="layout-column_column-1">
+        <div class="portlet-boundary portlet-boundary_artifactdetail_WAR_dpportlet_ portlet-static portlet-static-end artifact-detail-portlet "
+             id="p_p_id_artifactdetail_WAR_dpportlet_">
+            <span id="p_artifactdetail_WAR_dpportlet"></span>
+            <div class="portlet-borderless-container" style="">
+                <div class="portlet-body"> 
+                    
+                    <div class="artifact-header">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td><h1 class="artifact-name">vRealize CloudClient</h1></td>
+                                <td class="versions">
+                                    <select name="forma" onchange="location = this.value;">
+                                        
+                                        <option value="/web/tool/4.7.1/cloudclient"  selected="selected"> 4.7.1</option>
+                                        
+                                        <option value="/web/tool/4.7.0/cloudclient" > 4.7.0</option>
+                                        
+                                        <option value="/web/tool/4.6.0/cloudclient" > 4.6.0</option>
+                                        
+                                        <option value="/web/tool/4.5.0/cloudclient" > 4.5.0</option>
+                                        
+                                        <option value="/web/tool/4.4.0/cloudclient" > 4.4.0</option>
+                                        
+                                        <option value="/web/tool/4.3.0/cloudclient" > 4.3.0</option>
+                                        
+                                        <option value="/web/tool/4.2.0/cloudclient" > 4.2.0</option>
+                                        
+                                        <option value="/web/tool/4.1.0/cloudclient" > 4.1.0</option>
+                                        
+                                        <option value="/web/tool/4.0.0/cloudclient" > 4.0.0</option>
+                                        
+                                        <option value="/web/tool/3.5.0/cloudclient" > 3.5.0</option>
+                                        
+                                        <option value="/web/tool/3.4.1/cloudclient" > 3.4.1</option>
+                                        
+                                        <option value="/web/tool/3.3.1/cloudclient" > 3.3.1</option>
+                                        
+                                    </select>
+                                </td>
+                                <td style="vertical-align: middle;"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row-fluid">
+
+                    <div class="span9">
+                        <div class="webcontent">
+                            
+                                <p>vRealize CloudClient is a command-line utility that provides verb-based access with a unified interface across vRealize Automation APIs.</p>
+
+<p><strong>Use Case Highlights</strong></p>
+
+<ul>
+	<li>Browse the catalog and submit a request</li>
+	<li>Approve a catalog request</li>
+	<li>Manage provisioned machines</li>
+	<li>Create tenants and groups</li>
+	<li>Configure IaaS, including endpoints, data collection, and reservations</li>
+	<li>Manage catalog services and entitlements</li>
+	<li>Import and export blueprints and other content to human-readable format</li>
+	<li>Submit authenticated vRealize Automation API calls from the command line</li>
+	<li>Automate updates to VM reservations following SRM failover</li>
+	<li>Execute vRealize Orchestrator workflows</li>
+</ul>
+
+<p><strong>Features and Benefits</strong></p>
+
+<ul>
+	<li>Standardized command-line interface that remains stable as underlying APIs evolve</li>
+	<li>Auto login for scripting (password and keyfiles)</li>
+	<li>JSON, CSV, and tabular formatting</li>
+	<li>File export</li>
+	<li>Sample scripts to demonstrate common scenarios</li>
+	<li>Plugin model enables extensibility to additional use cases</li>
+</ul>
+
+<p></p>
+
+<p><strong>What&#39;s New in 4.7.1</strong></p>
+
+<p>The vRealize CloudClient 4.7.1 release includes Log4j libraries update.</p>
+
+<p><strong>What&#39;s New in 4.7</strong></p>
+
+<p>The vRealize CloudClient 4.7 release includes resolved issues and support for Site Recovery Manager 8.1.2</p>
+
+<p>For additional details, refer to the release notes.</p>
+
+<p><strong>What&#39;s New in 4.6</strong></p>
+
+<p>The vRealize CloudClient 4.6 release includes resolved issues and support for Site Recovery Manager 8.1</p>
+
+<p>For additional details, refer to the release notes.</p>
+
+<p><strong>What&#39;s New in 4.5</strong></p>
+
+<p>vRealize CloudClient 4.5 introduces the following enhancements:</p>
+
+<ul>
+	<li>Multi-factor authentication in CloudClient for vRealize Automation users</li>
+	<li>Cancel in-progress requests</li>
+	<li>CloudClient 4.5 uses TLS 1.2 by default.</li>
+</ul>
+
+<p>For additional details, refer to the release notes.</p>
+
+<p><strong>What Was New in 4.4</strong></p>
+
+<p>vRealize CloudClient 4.4 introduces the following enhancements:</p>
+
+<ul>
+	<li>The vra deployment action execute command now supports scale in and scale out for deployments.</li>
+	<li>The vra service add and vra service update commands have a new --owner parameter that enables you to add or update owners for a service.</li>
+	<li>If the tenant parameter is not provided in the vra login userpass command, you are prompted for the tenant.</li>
+	<li>The vra businessgroup updatecommand has two new parameters,--addsharedaccessusersand--removesharedaccessusers, that enable you to assign or unassign users to the Shared Access User Role for the business group.</li>
+	<li>With the release of vRealize Automation version 7.3, the endpoint configuration commands have been updated.</li>
+	<li>In addition, several documentation and usability enhancements have been made.</li>
+</ul>
+
+<p></p>
+
+<p><strong>What Was New in 4.3</strong></p>
+
+<p>vRealize CloudClient 4.3 introduces the following enhancements:</p>
+
+<ul>
+	<li>The vra entitlement principal assign command has a new --allUsers parameter that enables you to assign all users and groups belonging to business group as principals to an entitlement (requires vRealize Automation 7.2).</li>
+	<li>The new vra entitlement remove command enables you to delete unwanted entitlements (requires vRealize Automation 7.2).</li>
+	<li>The new vra catalogitem service unassign enables you to remove a service from a catalog item.</li>
+	<li>CloudClient&#39;s truststore password can now be set by the user. As a result of this update, users may be prompted to accept certificates that were previously accepted in earlier versions of CloudClient.</li>
+	<li>CloudClient 4.3 runs on Java version 1.8. Java 1.7 is no longer supported.</li>
+</ul>
+
+<p></p>
+
+<p><strong>What Was New in 4.2</strong></p>
+
+<p>vRealize CloudClient 4.2 introduces the following enhancements:</p>
+
+<ul>
+	<li>The vra logincommands now take an optional port number as part of the--server parameter.</li>
+	<li>Keyfile-based authentication is supported for IaaS login.</li>
+	<li>A new vco logoutcommand has been introduced to close active vRealize Orchestrator sessions.</li>
+	<li>Two new options have been added to thecloudclient.configfile to disable auto-completion when CloudClient is used for scripting, and to bypasscertificate checks the first time CloudClient communicates with a server.</li>
+	<li>New vra icon commands are available to manage the catalog icons. System administrators can use these commands to update the default system icons (requires vRealize Automation 7.1 or later).</li>
+	<li>Disaster recovery scenarios with Site Recovery Manager for machines provisioned through XaaS are supported through CloudClient (requires vRealize Automation 7.1 or later).</li>
+</ul>
+
+<p></p>
+
+<p><strong>What Was New in 4.1</strong></p>
+
+<p>vRealize CloudClient 4.1 introduces the following enhancements:</p>
+
+<ul>
+	<li>The vra catalog request submitcommand supports the --leasedays option.</li>
+	<li>Machine provisioning and reconfigure requests validate that specified memory MB values are divisible by 4.</li>
+	<li>CloudClient supports Delete Snapshot and Revert Snapshot operations.</li>
+	<li>CloudClient documentation provides comprehensive information about valid values for command parameters.</li>
+	<li>CloudClient handles session expiration gracefully. vRealize Automation sessions expire on the server side rather than on the CloudClient side. If you launch CloudClient after a session expires, CloudClient automatically attempts to log in using the credentials found in CloudClient.properties or environment variables.</li>
+	<li>Log in procedure requires CloudClient to accept the vRealize Automation appliance and IaaS certificates. When you use CloudClient to log in to vRealize Automation for the first time, you are prompted to accept the relevant certificates.</li>
+</ul>
+
+<p></p>
+
+<p><strong>What Was New in 4.0</strong></p>
+
+<p>vRealize CloudClient 4.0 introduced the following enhancements:</p>
+
+<ul>
+	<li>Support for importing and exporting blueprints, software components, property groups, property definitions, and XaaS (formerly Advanced Service Designer) content</li>
+	<li>Updates to CloudClient commands for compatibility with vRealize Automation 7.0</li>
+	<li>Contextual auto-completion of command options</li>
+	<li>New commands for making authenticated vRealize Automation API calls from the command line</li>
+	<li>Support for removing a machine from management by vRealize Automation and removing inactive compute resources</li>
+	<li>Support for Site Recovery Manager 6</li>
+</ul>
+
+<p></p>
+
+<p><strong>Compatibility</strong></p>
+
+<p>For information about CloudClient compatibility with VMware products, refer to the&nbsp;<a href="http://www.vmware.com/resources/compatibility/sim/interop_matrix.php#interop&amp;150=&amp;7=&amp;13=&amp;117=&amp;114=&amp;74" target="_blank">VMware Product Interoperability Matrix</a>.</p>
+
+                            
+                        </div>
+                        <div id="tags">
+                            
+                        </div>
+                        
+                        <div id="download" class="private-download">
+                                
+                                        
+                                            
+                                                <h3><span>1</span>Downloads</h3>
+                                            
+                                                <p>By downloading, installing, or using the Software, you agree to be bound by the terms of VMware’s Software Development Kit License Agreement unless there is a different license provided in or specifically referenced by the downloaded file or package. If you disagree with any terms of the agreement, then do not use the Software.</p>
+                                            
+                                            <div class="downloads-for-artifacts">
+                                            <div class="lfr-search-container ">
+                                                <div id="_artifactdetail_WAR_dpportlet_artifactsSearchContainerSearchContainer">
+                                                    <table class="table table-bordered table-hover table-striped">
+                                                        <thead class="table-columns">
+                                                        <tr>
+                                                            <th class="table-first-header"
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-name">
+                                                                Name
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-version">
+                                                                Version
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-size">
+                                                                Size
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-md5">
+                                                                MD5
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-5">
+                                                                &nbsp;
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-6">
+                                                                &nbsp;
+                                                            </th>
+                                                            <th class="table-last-header"
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_col-7">
+                                                                &nbsp;
+                                                            </th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody class="table-data">
+                                                        
+                                                        <tr class=" ">
+                                                            <td class="table-cell first">
+                                                                
+                                                                <span
+                                                                    id="doc-15182"
+                                                                    title="vRealize CloudClient"> vRealize CloudClient</span>
+                                                                
+                                                            </td>
+                                                            <td class="table-cell "> 4.7.1</td>
+                                                            <td class="table-cell "> </td>
+                                                            <td class="table-cell "> </td>
+                                                            <td class="table-cell documentation"> &nbsp;
+                                                            </td>
+                                                            <td class="table-cell download"><a
+                                                                    href="https://customerconnect.vmware.com/en/downloads/details?downloadGroup=CLOUDCLIENT_471&amp;productId=491"
+                                                                    class="btn displayEula internal"
+                                                                    target="_self">Download</a></td>
+                                                            <td class="table-cell last"></td>
+                                                        </tr>
+                                                        
+                                                        <tr class="lfr-template">
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                            <td class="table-cell"></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                
+                        </div>
+                        <div id="documentation">
+                            
+                                
+                                    
+                                    <h3><span>2</span>Documentation and Reference</h3>
+                                    <div class="documents-for-artifacts">
+                                        <div class="grouped-downloads">
+                                            <div class="lfr-search-container ">
+                                                <div id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_1SearchContainer">
+                                                    <table class="table table-bordered table-hover table-striped">
+                                                        <thead class="table-columns">
+                                                        <tr>
+                                                            <th class="table-first-header"
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_1_col-name">
+                                                                Name
+                                                            </th>
+                                                            <th class=""
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_1_col-size">
+                                                                Size
+                                                            </th>
+                                                            <th class="table-last-header"
+                                                                id="_artifactdetail_WAR_dpportlet_artifactsSearchContainer_1_col-3">
+                                                                &nbsp;
+                                                            </th>
+                                                        </tr>
+                                                        </thead>
+                                                        
+                                                            
+                                                                <tbody class="category-row">
+                                                                    <tr>
+                                                                        <td colspan="100">General </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://vdc-download.vmware.com/vmwb-repository/dcr-public/5694ebcb-26b2-472f-b1ad-ffa19f50cca1/4e09a203-6513-4fcf-a7e0-0a799b34c505/VMware_vRealize_CloudClient-docs-4.7.1-19207804.zip"
+                                                                                data-tracking-name="CloudClient Documentation"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            CloudClient Documentation
+                                                                        </a>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell ">2.0  MB</td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://vdc-download.vmware.com/vmwb-repository/dcr-public/2a4a96dd-37bc-419b-84ce-4a1c0569e7fe/3ec4bd8e-dd22-4144-8856-09bae9f56d7f/VMware_vRealize_CloudClient-samples-4.7.1-19207804.zip"
+                                                                                data-tracking-name="CloudClient Samples"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            CloudClient Samples
+                                                                        </a>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell ">12.4  KB</td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                        
+                                                            
+                                                                <tbody class="category-row">
+                                                                    <tr>
+                                                                        <td colspan="100">OSS </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            
+                                                            
+                                                                <tbody class="table-data">
+                                                                <tr class=" " data-category="">
+                                                                    <td class="table-cell first">
+                                                                        
+                                                                        
+                                                                        <a
+                                                                                href="https://customerconnect.vmware.com/en/downloads/details?downloadGroup=CLOUDCLIENT_471_OSS&amp;productId=1206"
+                                                                                data-tracking-name="Cloud Client Open Source"
+                                                                                data-tracking-version="1.0"
+                                                                                target="_self">
+                                                                            Cloud Client Open Source
+                                                                        </a>
+                                                                        
+                                                                        
+                                                                        
+                                                                    </td>
+                                                                    <td class="table-cell "></td>
+                                                                    <td class="table-cell last"></td>
+                                                                </tr>
+                                                                <tr class="lfr-template">
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                    <td class="table-cell"></td>
+                                                                </tr>
+                                                            
+                                                        
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                       </div>
+                                    </div>
+                                
+                            
+
+                        </div>
+
+                        
+                    </div>
+                    <div class="span3">
+                        
+                            
+    
+
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div id="videoModalOverlay"></div>
+<div id="videoModal">
+    <span id="closeModalBtn"></span>
+    <div id="videoModalContent">
+        <video id="videoPlayer" preload="metadata" controls>
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+                </div>
+                </div>
+            </div>
+            <div class="portlet-boundary portlet-boundary_1_WAR_kaleodesignerportlet_ portlet-static portlet-static-end kaleo-designer-portlet "
+                 id="p_p_id_1_WAR_kaleodesignerportlet_"><span id="p_1_WAR_kaleodesignerportlet"></span></div>
+            <form action="#" id="hrefFm" method="post" name="hrefFm"><span></span></form>
+        </div>
+        
+    <footer>
+        <div class="gradient-hr"></div>
+        <div class="ph-footer">
+            <div class="footer-container-row ph-footer-row">
+                <div class="footer-container-col"><span> <a href="https://www.vmware.com" title="VMware Logo"
+                                                            target="_blank" class="nav-link external"
+                                                            rel="noopener"> <img alt="VMware Logo" width="134" aria-label="VMware Logo"
+                                                                                 src="/everay-assets/vmware-code-theme/images/VMware-by-Broadcom-Logo_color.svg"/> </a> </span>
+                </div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">Company</h4>
+                    <div class="footer-link-text ph-footer-col1-row2"><a
+                            href="https://www.vmware.com/download/eula.html" class="clickable external"
+                            target="_blank" rel="noopener"> End User Terms &amp; Conditions </a> <br/> <a
+                            href="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/company/vmw-modern-slavery-california-statement-2021.pdf"
+                            class="clickable external" target="_blank" rel="noopener"> California Transparency Act
+                        Statement </a> <br/> <a href="https://www.vmware.com/vmwarestore/"
+                                                class="clickable external"
+                                                target="_blank" rel="noopener">Store</a></div>
+                </div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">Support</h4>
+                    <div class="footer-link-text ph-footer-col1-row2"><a href="https://developer.vmware.com/support"
+                                                                         class="clickable internal" target="_self"
+                                                                         rel="noopener noreferrer">Developer Support
+                        Options</a> <br/> <a href="https://dcpn.my.site.com/login?so=00Di0000000biLz"
+                                             class="clickable internal" target="_self" rel="noopener noreferrer">DC
+                        Partner Network</a> <br/> <a href="https://docs.vmware.com/" class="clickable external"
+                                                     target="_blank" rel="noopener">Product Documentation</a> <br/>
+                        <a href="https://www.vmware.com/resources/compatibility/search.php" class="clickable external"
+                           target="_blank" rel="noopener">Compatibility Guide</a><br />
+                        <a class="feedback-trigger">Report an Issue on this Page</a></div>
+                </div>
+                <div class="footer-container-col ph-placeholder"></div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">Resources</h4>
+                    <div class="footer-link-text ph-footer-col1-row2"><a href="https://go.techzone.vmware.com/"
+                                                                         class="clickable external" target="_blank"
+                                                                         rel="noopener">VMware Tech Zone</a> <br/> <a
+                            href="https://www.vmware.com/training" class="clickable external" target="_blank"
+                            rel="noopener">Training</a> <br/> <a href="https://pathfinder.vmware.com/"
+                                                                 class="clickable external" target="_blank"
+                                                                 rel="noopener">Pathfinder</a> <br/></div>
+                </div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">VMware Social</h4>
+                    <table class="ph-footer-col4">
+                        <tbody>
+                        <tr>
+                            <td><a href="https://twitter.com/VMware" title="Twitter" target="_blank" rel="noopener"
+                                   class="ph-footer-col4-row2 external"> <i class="fa fa-twitter"></i> <span
+                                    class="social-media">Twitter</span> </a></td>
+                            <td><a href="https://www.facebook.com/vmware" title="Facebook" target="_blank"
+                                   rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                    class="fa fa-facebook-square"></i> <span
+                                    class="social-media">Facebook</span> </a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.youtube.com/user/vmwaretv" title="YouTube" target="_blank"
+                                   rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                    class="fa fa-youtube-square"></i> <span class="social-media">YouTube</span>
+                            </a></td>
+                            <td><a href="https://www.linkedin.com/company/vmware" title="LinkedIn" target="_blank"
+                                   rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                    class="fa fa-linkedin-square"></i> <span
+                                    class="social-media">LinkedIn</span> </a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="fb-links">
+                <hr class="br-black mb-90 line-size"/>
+                <span class="copy fb-links-text">Copyright © 2005-2024 Broadcom. All Rights Reserved. The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.</span> <a
+                    href="https://www.vmware.com/help/legal.html" title="Terms of Use" target="_blank"
+                    rel="noopener" class="fb-links-text external">Terms of Use</a> <a
+                    href="https://www.vmware.com/help/privacy.html" title="Privacy" target="_blank" rel="noopener"
+                    class="fb-links-text external">Privacy</a> <a
+                    href="https://www.vmware.com/help/privacy/california-privacy-rights.html"
+                    title="Your California Privacy Rights" target="_blank" rel="noopener"
+                    class="fb-links-text external">Your California Privacy Rights</a> <a
+                    href="https://www.vmware.com/help/accessibility.html" title="Accessibility" target="_blank"
+                    rel="noopener" name="&amp;lpos=nav_footer : 8&amp;le=event52,event75"
+                    class="fb-links-text external">Accessibility</a> <a
+                    href="https://www.vmware.com/help/trademarks.html" title="Trademarks" target="_blank"
+                    class="fb-links-text external" rel="noopener">Trademarks</a> <a
+                    href=" https://www.vmware.com/help.html" title="Help" target="_blank" rel="noopener noreferrer"
+                    class="fb-links-text">Help</a> <a href="https://www.vmware.com/forms/customer_feedback.html"
+                                                      title="Feedback" class="fb-links-text clickable external"
+                                                      target="_blank" rel="noopener">Feedback</a> <a
+                    href="https://www.vmware.com/company/contact_sales.html" title="Contact Sales" target="_blank"
+                    rel="noopener" class="fb-links-text external">Contact Sales</a></div>
+        </div>
+    </footer>
+
+
+        <button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie Settings</button>
+    <noscript><img src="https://developer.vmware.com/akam/13/pixel_6b778315?a=dD02ZjM4OGI5MjVkYmIwYzBlZWVlNGJlMjJiOWU1MTBiODNkNzY1ZTQ5JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript><script type="text/javascript"  src="/IqmVpEzabH39/EMxACt/JgC8Py/7hYa6rSLph/Zxs-fQE/NkM/hHCJ2Eik"></script></body>
+    <script src="/everay-assets/everay/js/everay-lib.js"></script>
+    </html>

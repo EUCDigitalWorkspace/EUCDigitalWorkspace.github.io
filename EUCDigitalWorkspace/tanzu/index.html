@@ -1,0 +1,1067 @@
+
+    <!DOCTYPE html>
+    <html class="vmware aui ltr" dir="ltr" lang="en-US">
+        <head>
+            <title>Tanzu Developer Center - Developer Portal</title>
+            <meta content="initial-scale=1.0, width=device-width" name="viewport"/>
+            <meta name="google-site-verification" content="4sw39tzmJEJbKLHofv5AZrf3qetHBTFB_-FGLJzzP18"/>
+            <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+            <link href="/everay-assets/vmware-code-theme/images/favicon.ico" rel="Shortcut Icon"/>
+            <link rel="stylesheet" href="/everay-assets/everay/css/everay-lib.css"/>
+            <link rel="stylesheet" href="/everay-assets/everay/css/developer-connect.css"/>
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://unpkg.com/@clr/ui/clr-ui.min.css" />
+
+            
+    
+        <script type="text/plain" class="optanon-category-C0002">
+            window["_paq"] = window["_paq"] || [];
+            (function(a,b,c,d,e,f) {
+                window[d] = window[d] || {};
+                window[d]._q = window[d]._q || [];
+                ['identify', 'page', 'track', 'metadata', 'locale', 'theme'].forEach(function(t) {
+                    window[d][t] = function() {
+                        var e = Array.prototype.slice.call(arguments); e.unshift(t); window[d]._q.push(e);
+                    }
+                });
+                window[d]._url = c;
+                window[d].init = window[d].init || function(p,q,r) {
+                    if (!window[d].initialized) { // to ensure init is executed only once
+                        window[d]._clientId = p; window[d]._clientName = q; window[d]._configs = r || {};
+                        window[d].initialized = true;
+                        e=a.createElement(b);e.async=1;e.src=c+'?client_id='+p+'&namespace='+d;
+                        f=a.getElementsByTagName(b)[0];f.parentNode.insertBefore(e,f);
+                    }
+                };
+
+                function uuidv4() {
+                    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                        var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+                        return v.toString(16);
+                    });
+                }
+                window['identity'] = uuidv4();
+            })(document, 'script', 'https://lumos.vmware.com/assets/lumos.js', 'lumos');
+
+            lumos.init('esp-prod-133-jxoiz', 'VMware Developer');
+        </script>
+    
+
+            
+
+<script src="https://www.vmware.com/content/dam/digitalmarketing/onetrust/assets/js/jquery-1.11.0.min.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="b9242434-9feb-47be-a894-3a9e658fdd50"></script>
+<script type="text/javascript"> function OptanonWrapper() { { window.dataLayer.push({ event: 'OneTrustGroupsUpdated' }); } } </script>
+
+
+            
+    
+        <script type="text/plain" class="optanon-category-C0002" async src='https://www.googletagmanager.com/gtag/js?id=G-LZ5W0Z51BZ'></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+        </script>
+        <script type="text/plain" class="optanon-category-C0002">
+                // load google analytics script
+                gtag('js', new Date());
+                gtag('config', 'G-LZ5W0Z51BZ');
+        </script>
+    
+
+        <script >bazadebezolkohpepadr="1802994684"</script><script type="text/javascript" src="https://developer.vmware.com/akam/13/6b778315"  defer></script></head>
+
+        <body>
+            <a class="skiptocontent" href="#main-content" >Skip to Main Content</a>
+            <div class="main-container app-header">
+                
+    <div class="Developer__Portal__Header">
+        <header class="header header-6 developer-connect">
+            <button type="button" class="header-hamburger-trigger" aria-label="Navigation menu" aria-expanded="false">
+                <span></span>
+            </button>
+            <div class="ph-header-actions-left" style="margin-right: 50px;">
+                <a id="logo" style="text-decoration: none" href="/" rel="noopener" target="_self">
+                    <span class="title"><img width="110" style="padding-top: 14px;" alt="vmware logo" src="/everay-assets/vmware-code-theme/images/VMware-by-Broadcom-Logo_white.svg">&nbsp;Developer</span>
+                </a>
+            </div>
+
+            <div class="header-nav clr-nav-level-1">
+                <a href="/home" class="nav-link header-link" title="Home" target="_self" rel="noopener noreferrer">
+                    Home
+                </a>
+
+                <a href="https://developer.vmware.com/products" class="nav-link active" aria-current="page" title="Products">
+                    Products
+                </a>
+
+                <a href="https://developer.vmware.com/apis" class="nav-link header-link" title="APIs" target="_self" rel="noopener noreferrer">
+                    APIs
+                </a>
+
+                <a href="https://developer.vmware.com/powercli" class="nav-link header-link" title="PowerCLI" target="_self" rel="noopener noreferrer">
+                    PowerCLI
+                </a>
+
+                <a href="https://developer.vmware.com/samples" class="nav-link header-link" title="Code Samples" target="_self" rel="noopener noreferrer">
+                    Code Samples
+                </a>
+
+                <a href="https://developer.vmware.com/sdks" class="nav-link header-link" title="SDKs" target="_self" rel="noopener noreferrer">
+                    SDKs
+                </a>
+
+                <a href="https://developer.vmware.com/tools" class="nav-link header-link" title="Tools" target="_self" rel="noopener noreferrer">
+                    Tools
+                </a>
+
+                <a href="https://developer.vmware.com/join" class="nav-link header-link" title="Join {code}" target="_self" rel="noopener noreferrer">
+                    Join {code}
+                </a>
+
+            </div>
+
+            <div class="header-actions">
+                <ul class="pull-right" id="nav-header-items-right" style="list-style: none;">
+                    <li class="device-search">
+                        <a class="no-link-anchor" id="topnav-device-close-icon">
+                            <i class="fa fa-close" style="color: #fff;font-size:20px" aria-hidden="true"></i>
+                        </a>
+                        <a class="no-link-anchor" id="topnav-device-search-icon">
+                            <i class="fa fa-search" style="color: #fff;font-size:20px" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="desktop-search">
+                        <a class="no-link-anchor" id="topnav-search-icon" style="color: #FFFFFF;">
+                            <i class="fa fa-search" aria-hidden="true">
+                            </i>
+                        </a>
+                        <form method="get" action="/search" id="topnav-search-form"
+                            style="display:none;margin-left:12px;margin-top:3px;" class=" internal">
+                            <input class="topnav-search-input" placeholder="Search VMware Developer" type="text"
+                                required="required" value="" name="keywords" />
+                            <button type="submit" tabindex="-1" class="topnav-search-btn">
+                                <i class="fa fa-search">
+                                </i>
+                            </button>
+                        </form>
+                    </li>
+                    <li class="login-tooltip">
+                        <a href="https://devportal-csp-authenticator.esp.vmware.com/api/auth/discovery?targetUri=https%3a%2f%2fdeveloper.vmware.com/web/dp/horizon-login" class="nav-link header-link" target="_self" rel="noopener noreferrer">
+                            Login
+                        </a>
+    
+                        <div class="login-tooltiptext">
+                            <span>Login with your VMware account</span>
+                            <br>
+                            <span>(Customer Connect credentials).</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="device-search">
+            <div class="device-topnav-search">
+                <form method="get" action="/search" style="width: 98%;" class="internal">
+                    <input class="topnav-search-input device" placeholder="Search" required="required" value=""
+                        name="keywords" type="text" />
+                    <button type="submit" tabindex="-1" class="device-topnav-search-btn">
+                        <i class="fa fa-search">
+                        </i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="nav-drawer">
+            <div class="close-btn">&times;</div>
+        </div>
+    </div>
+
+
+                <div class="content-area">
+                    
+    <div class="breadcrumbs">
+        <a href="/products">Product Dev Centers</a>
+        &nbsp; &gt; &nbsp;
+        <span>VMware Tanzu Developer Center</span>
+    </div>
+
+    <div>
+        <section id="main-content" role="main" class="dc">
+            <div class="dc-flex-container">
+                <div class="dc-flex-item dc-flex-item-left">
+                    <article>
+                        <h2>Tanzu Developer Center</h2>
+                        <p>VMware Tanzu enables you to build, run and manage modern apps on any cloud—and
+                            continuously deliver value to your customers. With VMware Tanzu, you can simplify multi-cloud operations
+                            and
+                            free yourself to move faster with easy access to the right resources. VMware Tanzu enables development and
+                            operations teams to work together in new ways that deliver transformative business results.</p>
+                        <div class="dc-cta">
+                            <a aria-label="page" target="_self" class="btn btn-primary button-link-3 tid-cloud-console-button"
+                               href="https://tanzu.vmware.com/get-started" title="https://tanzu.vmware.com/get-started">Get Started
+                                with Tanzu </a>
+                        </div>
+                    </article>
+                </div>
+                <div class="dc-flex-item dc-flex-item-right">
+                    <div id="video-container">
+                        <iframe width="560" height="315" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""
+                                src="https://www.youtube.com/embed/SDobPYHk_sQ" title="Introduction to VMware Tanzu Application Platform">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="Developer__Portal__Key__Cases" id="tanzu-developer-key-cases">
+            <div class="wrap">
+                <h2 class="wrap-h2">Key Use Cases for Developers</h2>
+                <div class="cards">
+                    <vmw-carousel>
+                        <section aria-labelledby="vmc-list">
+                            <div aria-live="polite" aria-atomic="true" class="sr-only"> Item 1 of 3. </div>
+                            <h3 class="sr-only" id="vmc-list"> VMC scrollable list. </h3>
+                            <div class="outer-carousel">
+                                <div class="navigation-arrow left-arrow">
+                                    <button class="btn btn-sm btn-link" aria-label="Move to the previous slide.">
+                                        <span class="arrow">&lt;</span>
+                                    </button>
+                                </div>
+                                <div class="middle-carousel">
+                                    <ul class="inner-carousel clr-row" style="left: 0px;">
+                                        <vmw-carousel-item role="listitem" tabindex="-1" class="clr-col-sm-12 clr-col-md-6 clr-col-xl-4"
+                                                           aria-hidden="false">
+                                            <div class="card">
+                                                <div class="card__text">
+                                                    <div class="card-content">
+                                                        <div class="wrap-it">
+                                                            <h3>Cloud Native Application Development</h3>
+                                                            <p>Accelerate your path to production.
+
+                                                                The development experience is often fragmented and riddled with complexity. Improving
+                                                                your
+                                                                developer experience directly impacts your ability to compete. VMware Tanzu takes an
+                                                                expanded approach to Kubernetes by providing complete application build and deployment
+                                                                capabilities focused on you, the developer, while at the same time, providing the
+                                                                requisite capabilities for enterprise operations, DevOps, and DevSecOps. Go from idea to
+                                                                running code in days.
+
+                                                                VMware Tanzu lets you build new applications and modernize existing ones. It enables you
+                                                                to implement DevOps practices and secure your software supply chain while embracing
+                                                                open-source innovation. </p>
+                                                        </div>
+                                                        <div class="linkDiv"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </vmw-carousel-item>
+                                        <vmw-carousel-item role="listitem" tabindex="-1" class="clr-col-sm-12 clr-col-md-6 clr-col-xl-4"
+                                                           aria-hidden="true">
+                                            <div class="card">
+                                                <div class="card__text">
+                                                    <div class="card-content">
+                                                        <div class="wrap-it">
+                                                            <h3>Secure Software Supply Chain</h3>
+                                                            <p>Deliver software to production quickly and securely
+                                                                Understanding and mitigating vulnerabilities in your path to production helps to de-risk
+                                                                business investments, provides opportunities to deliver more secure software to end
+                                                                users
+                                                                at a rapid pace, and removes friction for deploying code. With VMware Tanzu, you'll
+                                                                improve automated tooling and implement DevSecOps practices so you can securely and
+                                                                reliably ship high-quality code to production and fix security vulnerabilities faster.
+                                                                Best-in-class tools help make software secure by design. Tanzu Application Platform
+                                                                provides a deploy time policy to allow app operators to introduce policy in their supply
+                                                                chain (CI/CD) that blocks any unsigned images. Tanzu Build Service as part of Tanzu
+                                                                Application Platform builds images and automatically patches them when their
+                                                                dependencies
+                                                                fall out of date, reducing time to remediate CVEs at scale.</p>
+                                                        </div>
+                                                        <div class="linkDiv"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </vmw-carousel-item>
+                                        <vmw-carousel-item role="listitem" tabindex="-1" class="clr-col-sm-12 clr-col-md-6 clr-col-xl-4"
+                                                           aria-hidden="true">
+                                            <div class="card">
+                                                <div class="card__text">
+                                                    <div class="card-content">
+                                                        <div class="wrap-it">
+                                                            <h3>Open Source Platform</h3>
+                                                            <p>Get VMware Tanzu up and running for free in minutes.
+
+                                                                VMware Tanzu Community Edition is a full-featured, easy-to-manage Kubernetes platform
+                                                                for
+                                                                learners and users. It's a freely available, community supported, open source
+                                                                distribution
+                                                                of VMware Tanzu that can be installed and configured in minutes on your local
+                                                                workstation
+                                                                or your favorite cloud. Tanzu Community Edition includes the same open source software
+                                                                used in VMware Tanzu commercial offerings.
+
+                                                                Build or sharpen your cloud native skills, get ready for that certification exam, and
+                                                                can
+                                                                gain practical knowledge and skills in a hands-on environment on your local workstation.
+                                                                Put Tanzu Community Edition to the test with the biggest, gnarliest challenges you have.
+                                                                Run a proof of concept and complete the independent, objective research you need to
+                                                                support your strategic platform decision making. Tanzu Community Edition is free and
+                                                                open
+                                                                source. It's also full-featured, easy to manage, and supported by this community—and
+                                                                it's
+                                                                yours to use, no strings attached.</p>
+                                                        </div>
+                                                        <div class="linkDiv"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </vmw-carousel-item>
+                                    </ul>
+                                </div>
+                                <div class="navigation-arrow right-arrow">
+                                    <button class="btn btn-sm btn-link" aria-label="Move to the next slide.">
+                                        <span class="arrow">&gt;</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="navigation">
+                                <div class="navigation-slide-button-container">
+                                    <button class="btn btn-sm btn-link btn-icon active" aria-label="Slide 1. Current slide.">
+                                        <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+                                            <path d="M18,34A16,16,0,1,1,34,18,16,16,0,0,1,18,34Z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="btn btn-sm btn-link btn-icon" aria-label="Slide 2.">
+                                        <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+                                            <path d="M18,34A16,16,0,1,1,34,18,16,16,0,0,1,18,34Z"></path>
+                                        </svg>
+                                    </button>
+                                    <button class="btn btn-sm btn-link btn-icon" aria-label="Slide 3.">
+                                        <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+                                            <path d="M18,34A16,16,0,1,1,34,18,16,16,0,0,1,18,34Z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+                    </vmw-carousel>
+                </div>
+            </div>
+        </div>
+        <div class="Developer__Portal__Related__Resources">
+            <div class="Content__Container">
+                <h2 class="Grid_Header">Core Resources for Developers</h2>
+                <div class="Grid__Container">
+                    <div class="Column">
+                        <div class="Column__Header">API</div>
+                        <p></p>
+                        <div class="Column__Items">
+                            <a aria-label="page" target="_self" class="Column__Link"
+                                href="https://developer.vmware.com/apis/1263/Tanzu-Mission-Control"
+                                title="Tanzu Mission Control API">Tanzu Mission Control API</a>
+                            <p></p>
+                        </div>
+                        <div class="Column__Items">
+                            <a aria-label="page" target="_self" class="Column__Link"
+                                href="https://docs.wavefront.com/wavefront_api.html" title="Tanzu Observability API">Tanzu Observability
+                                API</a>
+                            <p></p>
+                        </div>
+                        <p></p>
+                        <div class="Column__Header">CLI</div>
+                        <p></p>
+                        <div class="Column__Items">
+                            <a aria-label="page" target="_self" class="Column__Link"
+                                href="https://docs.vmware.com/en/VMware-Tanzu-Mission-Control/services/tanzumc-using/GUID-7EEBDAEF-7868-49EC-8069-D278FD100FD9.html"
+                                title="Tanzu Mission Control CLI">Tanzu Mission Control CLI</a>
+                            <p></p>
+                        </div>
+                        <div class="Column__Items">
+                            <a aria-label="page" target="_self" class="Column__Link"
+                                href="https://docs.wavefront.com/wavefront_clis.html" title="Tanzu Observability CLI">Tanzu
+                                Observability CLI</a>
+                            <p></p>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="Column">
+                        <div class="Column__Header">Code Samples</div>
+                        <p></p>
+                        <div class="Column__Items">
+                            <a aria-label="page" target="_self" class="Column__Link"
+                               href="https://github.com/sample-accelerators/tanzu-java-web-app"
+                               title="Java Spring App for Tanzu Application Platform">Java Spring App for Tanzu Application
+                                Platform</a>
+                            <p></p>
+                        </div>
+                        <div class="Column__Items">
+                            <a aria-label="page" target="_self" class="Column__Link"
+                               href="https://github.com/spring-cloud-services-samples/animal-rescue"
+                               title="Spring Cloud Gateway for VMware Tanzu Sample App">Spring Cloud Gateway for VMware Tanzu Sample
+                                App</a>
+                            <p></p>
+                        </div>
+                        <div class="Column__Items">
+                            <a aria-label="page" target="_self" class="Column__Link"
+                               href="https://tanzu.vmware.com/developer/samples/" title="All Samples on Tanzu Developer">All Samples on
+                                Tanzu Developer</a>
+                            <p></p>
+                        </div>
+                        <a target="_self" class="btn-link Column__Link__Btn" style="text-transform: uppercase;"
+                           title="Find More Tanzu Samples on Sample Exchange"
+                           href="https://developer.vmware.com/samples?categories=Sample&amp;keywords=Tanzu">Find More Tanzu Samples
+                            on
+                            Sample Exchange</a>
+                        <p></p>
+                        <p></p>
+                    </div>
+
+                    <div class="Column">
+                        <div class="Column__Header">Developer Documentation</div>
+                        <p></p>
+                        <div class="Column__Items">
+                            <a aria-label="page" target="_self" class="Column__Link"
+                               href="https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/index.html"
+                               title="Tanzu Application Platform">Tanzu Application Platform</a>
+                            <p></p>
+                        </div>
+                        <div class="Column__Items">
+                            <a aria-label="page" target="_self" class="Column__Link"
+                               href="https://docs.pivotal.io/application-service/concepts/overview.html"
+                               title="Tanzu Application Service">Tanzu Application Service</a>
+                            <p></p>
+                        </div>
+                        <div class="Column__Items">
+                            <a aria-label="page" target="_self" class="Column__Link"
+                               href="https://docs.vmware.com/en/VMware-Tanzu-Mission-Control/index.html"
+                               title="Tanzu Mission Control">Tanzu Mission Control</a>
+                            <p></p>
+                        </div>
+                        <div class="Column__Items">
+                            <a aria-label="page" target="_self" class="Column__Link" href="https://docs.wavefront.com/"
+                               title="Tanzu Observability">Tanzu
+                                Observability</a>
+                            <p></p>
+                        </div>
+
+                        <a target="_self" aria-label="page" class="btn-link Column__Link__Btn" style="text-transform: uppercase;"
+                           title="Read More Tanzu Product Docs" href="https://docs.vmware.com/en/VMware-Tanzu/index.html">Read More
+                            Tanzu Product Docs</a>
+                        <p></p>
+                        <p></p>
+                    </div>
+
+                    <div class="Column">
+                        <div class="Column__Header">Developer Training and Learning</div>
+                        <p></p>
+                        <div class="Column__Items">
+                            <a target="_self" class="Column__Link" href="https://tanzu.vmware.com/developer/workshops/"
+                               title="Tanzu Hands-On Workshops">Tanzu Hands-On
+                                Workshops</a>
+                            <p></p>
+                        </div>
+                        <div class="Column__Items">
+                            <a target="_self" class="Column__Link" href="https://tanzu.vmware.com/developer/learningpaths/"
+                               title="Tanzu Developer Learning Paths">Tanzu
+                                Developer Learning Paths</a>
+                            <p></p>
+                        </div>
+                        <div class="Column__Items">
+                            <a target="_self" class="Column__Link" href="https://tanzu.vmware.com/developer/tv/"
+                               title="Tanzu.TV">Tanzu.TV</a>
+                            <p></p>
+                        </div>
+                        <div class="Column__Items">
+                            <a target="_self" class="Column__Link" href="https://tanzu.vmware.com/developer/guides/"
+                               title="Tanzu Developer Guides">Tanzu Developer
+                                Guides</a>
+                            <p></p>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Developer__Capabilities">
+            <div class="Developers__Content__Container">
+                <h2>Product Capabilities for Developers</h2>
+                <div class="Grid__Container__Capabilities">
+                    <div>
+                        <div class="Column">
+                            <div class="Column__Image">
+                                <img alt="" style="width: 45%; object-fit: contain; border: 0; text-align: left;"
+                                     src="/everay-assets/everay/tanzu/Transparenticon-clouds-dev-2color-dark-bg_1.svg">
+                            </div>
+                            <div class="Column__Header">
+                                <h3>Ship Great Software Faster</h3>
+                            </div>
+                            <div class="Column__Link">
+                                <p>Increase velocity with a modern software supply chain of frameworks, services
+                                    and
+                                    validated open source tech.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Column">
+                            <div class="Column__Image">
+                                <img alt="" style="width: 45%; object-fit: contain; border: 0; text-align: left;"
+                                     src="/everay-assets/everay/tanzu/Transparenticon-cloud-provider-cloud-provider-hub--2color-dark-bg_1.svg">
+                            </div>
+                            <div class="Column__Header">
+                                <h3>Simplify Multi-Cloud Operations</h3>
+                            </div>
+                            <div class="Column__Link">
+                                <p>Get your infrastructure ready to run modern apps, and centrally manage your
+                                    clouds, clusters and apps.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Column">
+                            <div class="Column__Image">
+                                <img alt="" style="width: 45%; object-fit: contain; border: 0; text-align: left;"
+                                     src="/everay-assets/everay/tanzu/Transparenticon-tanzu-developer-2color-dark-bg_1.svg">
+                            </div>
+                            <div class="Column__Header">
+                                <h3>Transform Dev and Ops Together</h3>
+                            </div>
+                            <div class="Column__Link">
+                                <p>Unite application developers and operations teams around the shared goal of
+                                    fast
+                                    release cycles.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Column">
+                            <div class="Column__Image">
+                                <img alt="" style="width: 45%; object-fit: contain; border: 0; text-align: left;"
+                                     src="/everay-assets/everay/tanzu/Transparenticon-clouds-kubernetes-2color-light-bg_1.svg">
+                            </div>
+                            <div class="Column__Header">
+                                <h3>Platform-as-a-Service (PaaS) for Kubernetes</h3>
+                            </div>
+                            <div class="Column__Link">
+                                <p>Deploy cloud native applications on Kubernetes infrastructure—whether that's
+                                    provided by public-cloud or self-owned on-premises infrastructure. Unlock developer productivity by
+                                    developing apps quickly on Kubernetes with simplicity of PaaS. Free developers from dealing with
+                                    everyday operations and giving them more time to focus on the code than infrastructure.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Column">
+                            <div class="Column__Image">
+                                <img alt="" style="width: 45%; object-fit: contain; border: 0; text-align: left;"
+                                     src="/everay-assets/everay/tanzu/Transparenticon-security-cloud-secure-2color-light-bg_1.svg">
+                            </div>
+                            <div class="Column__Header">
+                                <h3>Data Security, Compliance, and Process Automation</h3>
+                            </div>
+                            <div class="Column__Link">
+                                <p>Use cloud native security principles to automate compliance tasks. Build
+                                    automated systems that log every activity. Use an operational toolchain that can rapidly patch and
+                                    update components as new bits become available. Embrace immutable infrastructure.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Column">
+                            <div class="Column__Image">
+                                <img alt="" style="width: 45%; object-fit: contain; border: 0; text-align: left;"
+                                     src="/everay-assets/everay/tanzu/Transparenticon-tools-open-ecosystem-2color-dark-bg_1.svg">
+                            </div>
+                            <div class="Column__Header">
+                                <h3>Microservices</h3>
+                            </div>
+                            <div class="Column__Link">
+                                <p>Adopt a microservices architecture and boost velocity. Encourage rapid
+                                    iteration
+                                    and small changes to discrete components of a system. Deploy microservices via continuous delivery and
+                                    give developers a frictionless path to production on any Kubernetes. Deploy small changes frequently
+                                    and
+                                    see big benefits over time. Run apps on a runtime that makes it easy to do the right thing and further
+                                    your DevOps culture.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="Column">
+                            <div class="Column__Image">
+                                <img alt="" style="width: 45%; object-fit: contain; border: 0; text-align: left;"
+                                     src="/everay-assets/everay/tanzu/Transparenticon-clouds-multi-cloud-ops-2color-dark-bg_1.svg">
+                            </div>
+                            <div class="Column__Header">
+                                <h3>Multi-Cloud Observability</h3>
+                            </div>
+                            <div class="Column__Link">
+                                <p>Get out-of-the-box, real-time visibility across all major public cloud
+                                    platforms
+                                    - AWS, Azure and GCP - with 50+ public cloud integrations and pre-packaged dashboards showing key
+                                    metrics for all major cloud services. With VMware Tanzu Observability, easily monitor cloud
+                                    consumption
+                                    and cost metrics and convert them into data-driven insights for reducing your cloud costs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Developer__Portal__Resources">
+            <section class="wrapper">
+                <h2 class="card__related__resources">Related Resources for Tanzu Developers</h2>
+                <ul class="column__list" style="list-style: none;">
+                    <li class="column__item" style="list-style: none;">
+                        <ul class="card__list" style="list-style: none;">
+                            <li class="card__item" style="list-style: none;">
+                                <div>
+                                    <img alt="" class="card__image" style="height: 100%; width: 100%; object-fit: contain; border: 0;"
+                                         src="/everay-assets/everay/products/Illustr-TechZone.svg">
+                                </div>
+                                <div class="card__link">
+                                    <a target="_self" href="https://apps-cloudmgmt.techzone.vmware.com/tanzu-techzone"
+                                       title="Tanzu Tech Zone">
+                                        <h3 style="color: #1D428A;"> Tanzu Tech Zone</h3>
+                                    </a>
+                                </div>
+                                <div class="card__text">
+                                    <p> Go from zero to hero with the latest technical resources on Tanzu Tech Zone.
+                                        This is part of the Modern Apps and Cloud Management Tech Zone, which gives you a fast path to
+                                        understanding, evaluating and deploying VMware Cloud Management and Tanzu products. </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="column__item" style="list-style: none;">
+                        <ul class="card__list" style="list-style: none;">
+                            <li class="card__item" style="list-style: none;">
+                                <div>
+                                    <img alt="" class="card__image" style="height: 100%; width: 100%; object-fit: contain; border: 0;"
+                                         src="/everay-assets/everay/products/Tanzu-Logo-RelatedResource.svg">
+                                </div>
+                                <div class="card__link">
+                                    <a target="_self" href="https://tanzu.vmware.com/developer" title="Tanzu Developer Center">
+                                        <h3 style="color: #1D428A;"> Tanzu Developer Center</h3>
+                                    </a>
+                                </div>
+                                <div class="card__text">
+                                    <p> With everything you need to learn about developing modern applications,
+                                        visit
+                                        the Tanzu Developer site website for step-by-step guides, how-to videos, code samples, learning
+                                        paths,
+                                        streaming content from Developer Advocates, and more. </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="column__item" style="list-style: none;">
+                        <ul class="card__list" style="list-style: none;">
+                            <li class="card__item" style="list-style: none;">
+                                <div>
+                                    <img alt="" class="card__image" style="height: 100%; width: 100%; object-fit: contain; border: 0;"
+                                         src="/everay-assets/everay/tanzu/KubeAcademyLogo-RelatedResources.svg">
+                                </div>
+                                <div class="card__link">
+                                    <a target="_self" href="https://kube.academy/" title="KubeAcademy">
+                                        <h3 style="color: #1D428A;"> KubeAcademy</h3>
+                                    </a>
+                                </div>
+                                <div class="card__text">
+                                    <p> Learn Kubernetes from experts for free. Take individual courses or follow a
+                                        specific learning path for a straightforward way to learn what you need to — and skip what you
+                                        don't.
+                                        Join 60,000+ fellow learners to get hands-on practice with Kubernetes, track your progress, and
+                                        more.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="column__item" style="list-style: none;">
+                        <ul class="card__list" style="list-style: none;">
+                            <li class="card__item" style="list-style: none;">
+                                <div>
+                                    <img alt="" class="card__image" style="height: 100%; width: 100%; object-fit: contain; border: 0;"
+                                         src="/everay-assets/everay/products/Illustr-TechSupport.svg">
+                                </div>
+                                <div class="card__link">
+                                    <a target="_self" href="https://developer.vmware.com/support" title="Developer Support">
+                                        <h3 style="color: #1D428A;"> Developer Support</h3>
+                                    </a>
+                                </div>
+                                <div class="card__text">
+                                    <p> If you need assistance with using one of our APIs, SDKs or PowerCLI
+                                        commandlets, VMware offers a number of free and paid support options. </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="Developer__Community">
+            <div class="main">
+                <h2 class="main_community">Developer Community</h2>
+                <ul class="cards">
+                    <li class="cards_item details">
+                        <div class="card-hidden-coach">
+                            <a target="_self" class="text-block-a" href="https://tanzu.vmware.com/developer/advocates/"
+                               title="VMware Tanzu Developer Advocates">
+                                <h3 class="text-block-h3">VMware Tanzu Developer Advocates </h3>
+                            </a>
+                            <div class="card_content_other">
+                                <p class="card_text_coach">The Technical Advocacy team serves as a public face for VMware
+                                    Tanzu. We are respected experts in the IT community, speak frequently, create relevant content, and
+                                    offer
+                                    feedback for our customers, developers, ops people, etc. on the topics of: developers, operators, open
+                                    source, and digital transformation.</p>
+                                <ul class="card_coaches_list">
+                                    <li>
+                                        <img alt="" class="card_image_coach_1"
+                                             style="width: 90px; height: 90px; object-fit: contain; border: 0px;"
+                                             src="/everay-assets/everay/tanzu/cora-iberkleid-400.jpg">
+                                        <a target="_self" class="card-link" href="https://tanzu.vmware.com/developer/team/cora-iberkleid/"
+                                           title="Cora Iberkleid">
+                                            <span title="Name of the coach Cora Iberkleid" class="card_title_coach_1"> Cora Iberkleid</span>
+                                        </a>
+                                        <p class="card_details_coach_1"> Spring, Kubernetes, Microservices</p>
+                                    </li>
+                                    <li>
+                                        <img alt="" class="card_image_coach_2"
+                                             style="width: 90px; height: 90px; object-fit: contain; border: 0px;"
+                                             src="/everay-assets/everay/tanzu/michael-cote.jpeg">
+                                        <a target="_self" class="card-link" href="https://tanzu.vmware.com/developer/team/michael-cote/"
+                                           title="Michael Coté">
+                                            <span title="Name of the coach Michael Coté" class="card_title_coach_2"> Michael Coté</span>
+                                        </a>
+                                        <p class="card_details_coach_2"> Digital Transformation, DevOps </p>
+                                    </li>
+                                    <li>
+                                        <img alt="" class="card_image_coach_3"
+                                             style="width: 90px; height: 90px; object-fit: contain; border: 0px;"
+                                             src="/everay-assets/everay/tanzu/dashaun-carter.jpeg">
+                                        <a target="_self" class="card-link" href="https://tanzu.vmware.com/developer/team/dashaun-carter/"
+                                           title="DaShaun Carter">
+                                            <span title="Name of the coach DaShaun Carter" class="card_title_coach_2"> DaShaun Carter</span>
+                                        </a>
+                                        <p class="card_details_coach_3"> Spring, Kubernetes, Azure, Redis</p>
+                                    </li>
+                                    <li>
+                                        <img alt="" class="card_image_coach_4"
+                                             style="width: 90px; height: 90px; object-fit: contain; border: 0px;" src="/everay-assets/everay/tanzu/josh-long.jpeg">
+                                        <a target="_self" class="card-link" href="https://tanzu.vmware.com/developer/team/josh-long/"
+                                           title="Josh Long">
+                                            <span title="Name of the coach Josh Long" class="card_title_coach_2"> Josh Long</span>
+                                        </a>
+                                        <p class="card_details_coach_4"> Spring, Kubernetes, CloudFoundry</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cards_item social">
+                        <div class="card_hidden_social">
+                            <h3 class="card_title_social"> Tanzu Developer News &amp; Social </h3>
+                            <br>
+                            <div class="card_content_other">
+                                <img alt="" class="card_social_icon" style="height: 8%; width: 8%; object-fit: contain; border: 0px;"
+                                     src="/everay-assets/everay/products/icon-Twitter.svg">
+                                <a title="Social site Twitter" target="_self" aria-label="page" class="card_social_link"
+                                   href="https://twitter.com/VMwareTanzu">Twitter</a>
+                                <br>
+                                <br>
+                                <img alt="" class="card_social_icon" style="height: 8%; width: 8%; object-fit: contain; border: 0px;"
+                                     src="/everay-assets/everay/products/icon-youtube.svg">
+                                <a title="Social site YouTube" target="_self" aria-label="page" class="card_social_link"
+                                   href="https://www.youtube.com/VMwareTanzu">YouTube</a>
+                                <br>
+                                <br>
+                                <img alt="" class="card_social_icon" style="height: 8%; width: 8%; object-fit: contain; border: 0px;"
+                                     src="/everay-assets/everay/products/icon-social-Twitch.svg">
+                                <a title="Social site Twitch" target="_self" aria-label="page" class="card_social_link"
+                                   href="https://twitch.com/vmwaretanzu">Twitch</a>
+                                <br>
+                                <br>
+                                <img alt="" class="card_social_icon" style="height: 8%; width: 8%; object-fit: contain; border: 0px;"
+                                     src="/everay-assets/everay/products/icon-social-stackoverflow.svg">
+                                <a title="Social site StackOverflow" target="_self" aria-label="page" class="card_social_link"
+                                   href="https://stackoverflow.com/questions/tagged/vmware-tanzu">StackOverflow</a>
+                                <br>
+                                <br>
+                                <img alt="" class="card_social_icon" style="height: 8%; width: 8%; object-fit: contain; border: 0px;"
+                                     src="/everay-assets/everay/products/icon-social-github.svg">
+                                <a title="Social site GitHub" target="_self" aria-label="page" class="card_social_link"
+                                   href="https://github.com/vmware-tanzu">GitHub</a>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="Developer__Portal__Products">
+            <section class="wrapper">
+                <h2 class="card__related__resources">Related Products for Tanzu Developers</h2>
+                <p class="card__related__desc"> Explore products that integrate with Tanzu and deliver
+                    additional value to developers. Find APIs, SDKs, docs, code samples, tools, and other resources you need to
+                    design and develop your solutions. </p>
+                <vmw-carousel>
+                    <section aria-labelledby="related-products-list">
+                        <div aria-live="polite" aria-atomic="true" class="sr-only"> Items 1, 2 in slide 1 of
+                            2.
+                        </div>
+                        <h3 class="sr-only" id="related-products-list"> Related Products list. </h3>
+                        <div class="outer-carousel">
+                            <div class="navigation-arrow left-arrow">
+                                <button class="btn btn-sm btn-link" aria-label="Move to the previous slide.">
+                                    <span class="arrow">&lt;</span>
+                                </button>
+                            </div>
+                            <div class="middle-carousel">
+                                <ul class="inner-carousel clr-row" style="left: 0px;">
+                                    
+                                        <vmw-carousel-item role="listitem" tabindex="-1" aria-hidden="false">
+                                            <ul class="column__list" style="list-style: none;">
+                                                <li class="column__item" style="list-style: none;">
+                                                    <ul class="card__list" style="list-style: none;">
+                                                        <li class="card__item" style="list-style: none;">
+                                                            <div class="card__image">
+                                                                <img alt=""
+                                                                     style="height: 25%; width: 25%; object-fit: contain; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;"
+                                                                     src="/everay-assets/everay/products/spring-edf462fec682b9d48cf628eaf9e19521.svg">
+                                                            </div>
+                                                            <div class="card__link">
+                                                                <a target="_self" href="https://spring.io/"
+                                                                   title="Spring Developer Center">
+                                                                    <h3 class="card_link_text"
+                                                                        style="color: rgb(29, 66, 138); --darkreader-inline-color: #82b3e5;"
+                                                                        data-darkreader-inline-color="">Spring Developer Center</h3>
+                                                                </a>
+                                                            </div>
+                                                            <div class="card__text">
+                                                                <p>Spring makes programming Java quicker, easier, and safer for everybody. Spring&#39;s focus on speed, simplicity, and productivity has made it the world&#39;s most popular Java framework.</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </vmw-carousel-item>
+                                    
+                                        <vmw-carousel-item role="listitem" tabindex="-1" aria-hidden="false">
+                                            <ul class="column__list" style="list-style: none;">
+                                                <li class="column__item" style="list-style: none;">
+                                                    <ul class="card__list" style="list-style: none;">
+                                                        <li class="card__item" style="list-style: none;">
+                                                            <div class="card__image">
+                                                                <img alt=""
+                                                                     style="height: 25%; width: 25%; object-fit: contain; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;"
+                                                                     src="/everay-assets/everay/products/vmw-ico-vmc-on-aws-rgb_400px.svg">
+                                                            </div>
+                                                            <div class="card__link">
+                                                                <a target="_self" href="/products/vmc-on-aws"
+                                                                   title="VMware Cloud on AWS Developer Center">
+                                                                    <h3 class="card_link_text"
+                                                                        style="color: rgb(29, 66, 138); --darkreader-inline-color: #82b3e5;"
+                                                                        data-darkreader-inline-color="">VMware Cloud on AWS Developer Center</h3>
+                                                                </a>
+                                                            </div>
+                                                            <div class="card__text">
+                                                                <p>Deploy and run applications faster, integrate with AWS services, and automate your cloud infrastructure using various APIs, SDKs and CLIs.</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </vmw-carousel-item>
+                                    
+                                        <vmw-carousel-item role="listitem" tabindex="-1" aria-hidden="false">
+                                            <ul class="column__list" style="list-style: none;">
+                                                <li class="column__item" style="list-style: none;">
+                                                    <ul class="card__list" style="list-style: none;">
+                                                        <li class="card__item" style="list-style: none;">
+                                                            <div class="card__image">
+                                                                <img alt=""
+                                                                     style="height: 25%; width: 25%; object-fit: contain; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;"
+                                                                     src="/everay-assets/everay/products/vmw-ico-carbonblack-rgb_400px.svg">
+                                                            </div>
+                                                            <div class="card__link">
+                                                                <a target="_self" href="https://developer.carbonblack.com/"
+                                                                   title="Carbon Black Developer Center">
+                                                                    <h3 class="card_link_text"
+                                                                        style="color: rgb(29, 66, 138); --darkreader-inline-color: #82b3e5;"
+                                                                        data-darkreader-inline-color="">Carbon Black Developer Center</h3>
+                                                                </a>
+                                                            </div>
+                                                            <div class="card__text">
+                                                                <p>Integrate VMware Carbon Black into your security stack with open APIs, partner integrations, and platform SDKs.</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </vmw-carousel-item>
+                                    
+                                        <vmw-carousel-item role="listitem" tabindex="-1" aria-hidden="false">
+                                            <ul class="column__list" style="list-style: none;">
+                                                <li class="column__item" style="list-style: none;">
+                                                    <ul class="card__list" style="list-style: none;">
+                                                        <li class="card__item" style="list-style: none;">
+                                                            <div class="card__image">
+                                                                <img alt=""
+                                                                     style="height: 25%; width: 25%; object-fit: contain; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;"
+                                                                     src="/everay-assets/everay/products/vmw-prod-ico-vsphere-rgb_400px.svg">
+                                                            </div>
+                                                            <div class="card__link">
+                                                                <a target="_self" href="/products/vsphere"
+                                                                   title="vSphere Developer Center">
+                                                                    <h3 class="card_link_text"
+                                                                        style="color: rgb(29, 66, 138); --darkreader-inline-color: #82b3e5;"
+                                                                        data-darkreader-inline-color="">vSphere Developer Center</h3>
+                                                                </a>
+                                                            </div>
+                                                            <div class="card__text">
+                                                                <p>Explore a broad, powerful set of interfaces that enable you to integrate with vSphere functionality and to enable easy automation both programmatically and interactively.</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </vmw-carousel-item>
+                                    
+                                </ul>
+                            </div>
+                            <div class="navigation-arrow right-arrow">
+                                <button class="btn btn-sm btn-link" aria-label="Move to the next slide.">
+                                    <span class="arrow">&gt;</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="navigation">
+                            <div class="navigation-slide-button-container">
+                                <button class="btn btn-sm btn-link btn-icon" aria-label="Slide 1. Current slide.">
+                                    <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+                                        <path d="M18,34A16,16,0,1,1,34,18,16,16,0,0,1,18,34Z"></path>
+                                    </svg>
+                                </button>
+                                <button class="btn btn-sm btn-link btn-icon btn-neutral" aria-label="Slide 2.">
+                                    <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+                                        <path d="M18,34A16,16,0,1,1,34,18,16,16,0,0,1,18,34Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </vmw-carousel>
+            </section>
+        </div>
+    </div>
+
+                </div>
+
+                
+    <footer>
+        <div class="gradient-hr"></div>
+        <div class="ph-footer">
+            <div class="footer-container-row ph-footer-row">
+                <div class="footer-container-col"><span> <a href="https://www.vmware.com" title="VMware Logo"
+                                                            target="_blank" class="nav-link external"
+                                                            rel="noopener"> <img alt="VMware Logo" width="134" aria-label="VMware Logo"
+                                                                                 src="/everay-assets/vmware-code-theme/images/VMware-by-Broadcom-Logo_color.svg"/> </a> </span>
+                </div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">Company</h4>
+                    <div class="footer-link-text ph-footer-col1-row2"><a
+                            href="https://www.vmware.com/download/eula.html" class="clickable external"
+                            target="_blank" rel="noopener"> End User Terms &amp; Conditions </a> <br/> <a
+                            href="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/company/vmw-modern-slavery-california-statement-2021.pdf"
+                            class="clickable external" target="_blank" rel="noopener"> California Transparency Act
+                        Statement </a> <br/> <a href="https://www.vmware.com/vmwarestore/"
+                                                class="clickable external"
+                                                target="_blank" rel="noopener">Store</a></div>
+                </div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">Support</h4>
+                    <div class="footer-link-text ph-footer-col1-row2"><a href="https://developer.vmware.com/support"
+                                                                         class="clickable internal" target="_self"
+                                                                         rel="noopener noreferrer">Developer Support
+                        Options</a> <br/> <a href="https://dcpn.my.site.com/login?so=00Di0000000biLz"
+                                             class="clickable internal" target="_self" rel="noopener noreferrer">DC
+                        Partner Network</a> <br/> <a href="https://docs.vmware.com/" class="clickable external"
+                                                     target="_blank" rel="noopener">Product Documentation</a> <br/>
+                        <a href="https://www.vmware.com/resources/compatibility/search.php" class="clickable external"
+                           target="_blank" rel="noopener">Compatibility Guide</a><br />
+                        <a class="feedback-trigger">Report an Issue on this Page</a></div>
+                </div>
+                <div class="footer-container-col ph-placeholder"></div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">Resources</h4>
+                    <div class="footer-link-text ph-footer-col1-row2"><a href="https://go.techzone.vmware.com/"
+                                                                         class="clickable external" target="_blank"
+                                                                         rel="noopener">VMware Tech Zone</a> <br/> <a
+                            href="https://www.vmware.com/training" class="clickable external" target="_blank"
+                            rel="noopener">Training</a> <br/> <a href="https://pathfinder.vmware.com/"
+                                                                 class="clickable external" target="_blank"
+                                                                 rel="noopener">Pathfinder</a> <br/></div>
+                </div>
+                <div class="footer-container-col"><h4 class="ph-footer-col1">VMware Social</h4>
+                    <table class="ph-footer-col4">
+                        <tbody>
+                        <tr>
+                            <td><a href="https://twitter.com/VMware" title="Twitter" target="_blank" rel="noopener"
+                                   class="ph-footer-col4-row2 external"> <i class="fa fa-twitter"></i> <span
+                                    class="social-media">Twitter</span> </a></td>
+                            <td><a href="https://www.facebook.com/vmware" title="Facebook" target="_blank"
+                                   rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                    class="fa fa-facebook-square"></i> <span
+                                    class="social-media">Facebook</span> </a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.youtube.com/user/vmwaretv" title="YouTube" target="_blank"
+                                   rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                    class="fa fa-youtube-square"></i> <span class="social-media">YouTube</span>
+                            </a></td>
+                            <td><a href="https://www.linkedin.com/company/vmware" title="LinkedIn" target="_blank"
+                                   rel="noopener" class="ph-footer-col4-row2 external"> <i
+                                    class="fa fa-linkedin-square"></i> <span
+                                    class="social-media">LinkedIn</span> </a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="fb-links">
+                <hr class="br-black mb-90 line-size"/>
+                <span class="copy fb-links-text">Copyright © 2005-2024 Broadcom. All Rights Reserved. The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.</span> <a
+                    href="https://www.vmware.com/help/legal.html" title="Terms of Use" target="_blank"
+                    rel="noopener" class="fb-links-text external">Terms of Use</a> <a
+                    href="https://www.vmware.com/help/privacy.html" title="Privacy" target="_blank" rel="noopener"
+                    class="fb-links-text external">Privacy</a> <a
+                    href="https://www.vmware.com/help/privacy/california-privacy-rights.html"
+                    title="Your California Privacy Rights" target="_blank" rel="noopener"
+                    class="fb-links-text external">Your California Privacy Rights</a> <a
+                    href="https://www.vmware.com/help/accessibility.html" title="Accessibility" target="_blank"
+                    rel="noopener" name="&amp;lpos=nav_footer : 8&amp;le=event52,event75"
+                    class="fb-links-text external">Accessibility</a> <a
+                    href="https://www.vmware.com/help/trademarks.html" title="Trademarks" target="_blank"
+                    class="fb-links-text external" rel="noopener">Trademarks</a> <a
+                    href=" https://www.vmware.com/help.html" title="Help" target="_blank" rel="noopener noreferrer"
+                    class="fb-links-text">Help</a> <a href="https://www.vmware.com/forms/customer_feedback.html"
+                                                      title="Feedback" class="fb-links-text clickable external"
+                                                      target="_blank" rel="noopener">Feedback</a> <a
+                    href="https://www.vmware.com/company/contact_sales.html" title="Contact Sales" target="_blank"
+                    rel="noopener" class="fb-links-text external">Contact Sales</a></div>
+        </div>
+    </footer>
+
+            </div>
+
+            <button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie Settings</button>
+        <noscript><img src="https://developer.vmware.com/akam/13/pixel_6b778315?a=dD02ZjM4OGI5MjVkYmIwYzBlZWVlNGJlMjJiOWU1MTBiODNkNzY1ZTQ5JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript><script type="text/javascript"  src="/IqmVpEzabH39/EMxACt/JgC8Py/7hYa6rSLph/Zxs-fQE/NkM/hHCJ2Eik"></script></body>
+
+        <script async="" src="https://www.clarity.ms/s/0.7.8/clarity.js"></script>
+        <script src="/everay-assets/everay/js/everay-lib.js"></script>
+        <script src="/everay-assets/everay/js/developer-connect.js"></script>
+    </html>

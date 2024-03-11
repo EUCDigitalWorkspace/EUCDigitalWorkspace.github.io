@@ -1,0 +1,7 @@
+#_evidon_banner {
+    z-index: 999 !important;
+    margin-left: 0px !important;
+    width: 100% !important; }
+
+#ot-sdk-btn.ot-sdk-show-settings, #ot-sdk-btn.optanon-show-settings {
+    background-image: unset; }
