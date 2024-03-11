@@ -1,0 +1,176 @@
+# Project Information
+site_name: EUC Developer Portal
+site_url: https://eucdigitalworkspace.github.io
+site_author: Richard Croft
+site_description: Overview of various Docker images for CommonPool.
+docs_dir: docs
+site_dir: .site
+use_directory_urls: true
+
+# Repository
+repo_url: https://github.com/eucdigitalworkspace/eucdigitalworkspace.github.io
+edit_uri: edit/main/docs/
+
+# site_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]  
+# repo_url: !!python/object/apply:os.getenv ["CI_PROJECT_URL"]
+# repo_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]
+
+# Copyright
+copyright: |
+  Copyright &copy; 2005-2024 Broadcom. All rights reserved.<br/>
+  The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.<br/><br/>
+
+# Configuration
+theme:
+  name: material
+  favicon: favicon.ico
+  logo: assets/images/icon-white.svg
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: indigo
+    accent: indigo
+    toggle:
+      icon: material/toggle-switch
+      name: Dark Theme
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: indigo
+    accent: indigo
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: Light Theme
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+  - content.action.edit
+  - content.action.view
+  - content.code.annotate
+  - content.code.copy
+  - content.tabs.link
+  - navigation.footer
+  - navigation.header
+  - navigation.indexes
+  - navigation.instant
+  - navigation.sections
+  - navigation.tabs
+  - navigation.tabs.sticky
+  - navigation.top
+  - navigation.tracking
+  - search.highlight
+  - search.share
+  - search.suggest
+  - toc.follow
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\u200b\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - open-in-new-tab
+  - markdownextradata:
+      jinja_options:
+        variable_start_string: "${{"
+        variable_end_string: "}}"
+  - git-revision-date-localized:
+      enabled: !ENV [CI, false]
+      enable_creation_date: false
+      exclude:
+        - index.md
+      fallback_to_build_date: true
+      type: timeago
+  - swagger-ui-tag
+
+# Customization
+extra:
+  version:
+    default: latest
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/eucdigitalworkspace
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/VMware
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/user/vmwaretv
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/vmware
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/vmware
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/vmware/
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/_/photon
+    - icon: fontawesome/brands/gitlab
+      link: https://github.com/eucdigitalworkspace
+    - icon: fontawesome/brands/mastodon
+      link: https://github.com/eucdigitalworkspace
+    - icon: fontawesome/brands/slack
+      link: https://slack.com/vmware
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/vmware
+
+extra_css:
+  - assets/stylesheets/extra.css
+  - assets/stylesheets/spanable.css
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - neoteroi.spantable
+  - pymdownx.critic
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+        - material/.icons
+  - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+      - name: mermaid
+        class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - tables
+  - toc:
+      permalink: true
+
+# Navigation
+nav:
+  - Home:
+    - index.md
+  - Products:
+    - products/index.md
+  - Architecture:
+    - architecture/index.md
+    - Workspace ONE: architecture/workspaceone.md
+    - WS1 Access: architecture/access.md
+    - WS1 Assist: architecture/assist.md
+    - WS1 Intelligence: architecture/intelligence.md
+    - WS1 DEEM: architecture/deem.md
+    - WS1 UEM: architecture/uem.md
+    - Horizon: architecture/horizon.md
+    - AppVolumes: architecture/appvolumes.md
+  - APIs:
+    - api/index.md
+    - AppVolumes: api/appvolumes/index.md
+    - Horizon Server: api/horizon-server/index.md
+    - WS1 Identity Manager: api/ws1-identity/index.md
+    - WS1 Notifications: api/ws1-notifications/index.md
+  - PowerCLI: powercli/index.md
+  - Code Samples: samples/index.md
+  - SDKs: sdk/index.md
+  - Tools: tools/index.md
+  - About: about/index.md
