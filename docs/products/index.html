@@ -86,107 +86,80 @@
             <a class="skiptocontent" href="#main-content" >Skip to Main Content</a>
             <div class="main-container app-header">
                 
-    <div class="Developer__Portal__Header">
-        <header class="header header-6 developer-connect">
-            <button type="button" class="header-hamburger-trigger" aria-label="Navigation menu" aria-expanded="false">
-                <span></span>
-            </button>
-            <div class="ph-header-actions-left" style="margin-right: 50px;">
-                <a id="logo" style="text-decoration: none" href="/" rel="noopener" target="_self">
-                    <span class="title"><img width="110" style="padding-top: 14px;" alt="vmware logo" src="/everay-assets/vmware-code-theme/images/VMware-by-Broadcom-Logo_white.svg">&nbsp;Developer</span>
-                </a>
-            </div>
 
-            <div class="header-nav clr-nav-level-1">
-                <a href="/home" class="nav-link header-link" title="Home" target="_self" rel="noopener noreferrer">
-                    Home
-                </a>
-
-                <a href="/products" class="nav-link active" aria-current="page" title="Products">
-                    Products
-                </a>
-
-                <a href="/apis" class="nav-link header-link" title="APIs" target="_self" rel="noopener noreferrer">
-                    APIs
-                </a>
-
-                <a href="/powercli" class="nav-link header-link" title="PowerCLI" target="_self" rel="noopener noreferrer">
-                    PowerCLI
-                </a>
-
-                <a href="/samples" class="nav-link header-link" title="Code Samples" target="_self" rel="noopener noreferrer">
-                    Code Samples
-                </a>
-
-                <a href="/sdks" class="nav-link header-link" title="SDKs" target="_self" rel="noopener noreferrer">
-                    SDKs
-                </a>
-
-                <a href="/tools" class="nav-link header-link" title="Tools" target="_self" rel="noopener noreferrer">
-                    Tools
-                </a>
-
-                <a href="/join" class="nav-link header-link" title="Join {code}" target="_self" rel="noopener noreferrer">
-                    Join {code}
-                </a>
-
-            </div>
-
-            <div class="header-actions">
-                <ul class="pull-right" id="nav-header-items-right" style="list-style: none;">
-                    <li class="device-search">
-                        <a class="no-link-anchor" id="topnav-device-close-icon">
-                            <i class="fa fa-close" style="color: #fff;font-size:20px" aria-hidden="true"></i>
-                        </a>
-                        <a class="no-link-anchor" id="topnav-device-search-icon">
-                            <i class="fa fa-search" style="color: #fff;font-size:20px" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="desktop-search">
-                        <a class="no-link-anchor" id="topnav-search-icon" style="color: #FFFFFF;">
-                            <i class="fa fa-search" aria-hidden="true">
-                            </i>
-                        </a>
-                        <form method="get" action="/search" id="topnav-search-form"
-                            style="display:none;margin-left:12px;margin-top:3px;" class=" internal">
-                            <input class="topnav-search-input" placeholder="Search VMware Developer" type="text"
-                                required="required" value="" name="keywords" />
-                            <button type="submit" tabindex="-1" class="topnav-search-btn">
-                                <i class="fa fa-search">
-                                </i>
-                            </button>
-                        </form>
-                    </li>
-                    <li class="login-tooltip">
-                        <a href="https://devportal-csp-authenticator.esp.vmware.com/api/auth/discovery?targetUri=https%3a%2f%2fdeveloper.vmware.com/web/dp/horizon-login" class="nav-link header-link" target="_self" rel="noopener noreferrer">
-                            Login
-                        </a>
-    
-                        <div class="login-tooltiptext">
-                            <span>Login with your VMware account</span>
-                            <br>
-                            <span>(Customer Connect credentials).</span>
+                <div class="navbar main-navbar" style="height: 60px;">
+                    <div class="navbar-inner" style="background-color: #15193D!important;">
+                        <div class="container">
+                            <div class="device-search"> <a href="javascript:void(0)" id="topnav-device-close-icon"><i
+                                        class="fa fa-close" style="color: #fff;font-size:20px" aria-hidden="true"></i></a> <a
+                                    href="javascript:void(0)" id="topnav-device-search-icon"><i class="fa fa-search"
+                                        style="color: #fff;font-size:20px" aria-hidden="true"></i></a>
+                                <!-- <a href="javascript:void(0)" id="top-nav-device-main-icon"><i class="fa fa-bars"></i></a> -->
+                                <a href="javascript:void(0)" id="top-nav-device-main-icon" class="btn btn-navbar collapsed"
+                                    data-toggle="collapse" data-target=".navbar-responsive-collapse"> <i class="fa fa-bars"
+                                        style="color: #fff;font-size:20px"></i> </a> </div>
+                            <div> <a class="brand code_logo internal" href="/" rel="noopener" style="align-items: center;"
+                                    target="_self">
+                                    <div id="brand-logo-with-title-text"> <img
+                                            src="/vmware-code-theme/images/VMware-by-Broadcom-Logo_white.svg" alt="vmware logo"
+                                            style="height: 100%" />
+                                        <div class="brand-text"> Developer </div>
+                                    </div>
+                                </a> </div>
+                            <div class="nav-collapse navbar-responsive-collapse collapse" style="height: 0px;">
+                                <ul id="nav-header-link" class="nav">
+                                    <li class="first" style="border-left: 1px solid rgba(255, 255, 255, 0.15)"> <a href="/home"
+                                            class=" internal" target="_self"> <span translate-text="dc.Home">Home</span> </a>
+                                    </li>
+                                    <li> <a href="/products" class=" internal" target="_self"> <span
+                                                translate-text="dc.Products">Products</span> </a> </li>
+                                    <li> <a href="/apis" class=" internal" target="_self"> <span
+                                                translate-text="dc.APIs">APIs</span> </a> </li>
+                                    <li> <a href="/powercli" class=" internal" target="_self"> <span
+                                                translate-text="dc.APIs">PowerCLI</span> </a> </li>
+                                    <li> <a href="/samples" class=" internal" target="_self"> <span
+                                                translate-text="dc.Samples">Code Samples</span> </a> </li>
+                                    <li> <a href="/sdks" class=" internal" target="_self"> <span
+                                                translate-text="dc.SDKs">SDKs</span> </a> </li>
+                                    <li> <a href="/tools" class=" internal" target="_self"> <span
+                                                translate-text="dc.Tools">Tools</span> </a> </li>
+                                    <li> <a href="/join" class=" internal" target="_self"> <span
+                                                translate-text="dc.JoinCode">Join {code}</span> </a> </li>
+                                </ul> <!-- <hr class="nav" style="border-top:1px solid #CCCCCC;"> -->
+                                <ul class="nav pull-right" id="nav-header-items-right">
+                                    <li class="desktop-search"> <a href="javascript:void(0)" id="topnav-search-icon"
+                                            style="color: #FFFFFF;"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                        <form method="get" action="/web/dp/search" id="topnav-search-form"
+                                            style="display:none;margin-left:12px;margin-top:3px;" class=" internal"> <input
+                                                class="topnav-search-input" placeholder="Search VMware Developer"
+                                                translate-text-placeholder="dc.SearchVMwareCode" type="text" required="required"
+                                                value="" name="keywords" /> <button type="submit" tabindex="-1"
+                                                class="topnav-search-btn"><i class="fa fa-search"></i></button> </form>
+                                    </li>
+                                    <li id="localeSelector" class="locale"
+                                        style="border-right: 1px solid rgba(255,255,255, 0.15);"> <a href="#"> <i
+                                                class="fa fa-globe"></i>English </a> </li>
+                                    <script
+                                        type="text/javascript">$(document).ready(function () { $("#localeSelector").on("click", function () { var a = '<ul id="availableLocales">    <li>        <a data-locale="zh" href="javascript:void(0);">            中文        </a>    </li>    <li>        <a data-locale="en" href="javascript:void(0);">            English        </a>    </li>    <li>        <a data-locale="ja" href="javascript:void(0);">            日本語        </a>    </li></ul>'; alertEx({ header: "Choose a Language", message: a, ok: "Cancel" }); $("#availableLocales a").off("click").on("click", function () { var c = window.location.pathname; var b = (c[0] === "/" && (c[3] === "/" || c.length === 3)) ? c.substring(3) : c; window.location = "/" + $(this).data("locale") + b + window.location.search + window.location.hash }); return false }) });</script>
+                                    <!-- <li class="divider-vertical" style="height: 15px;margin:10px 10px 0 0px"></li> -->
+                                    <li class="login-tooltip"> <a
+                                            href="https://devportal-csp-authenticator.esp.vmware.com/api/auth/discovery?targetUri=https://developer.vmware.com/web/dp/horizon-login"
+                                            id="login-trigger" style="background: none;padding-left: 10px;font-weight: normal;"
+                                            target="_self" class=" internal"> Login </a> <span class="login-tooltiptext">Login
+                                            with your VMware account (Customer Connect credentials).</span> </li>
+                                </ul>
+                            </div>
                         </div>
-                    </li>
-                </ul>
-            </div>
-        </header>
-        <div class="device-search">
-            <div class="device-topnav-search">
-                <form method="get" action="/search" style="width: 98%;" class="internal">
-                    <input class="topnav-search-input device" placeholder="Search" required="required" value=""
-                        name="keywords" type="text" />
-                    <button type="submit" tabindex="-1" class="device-topnav-search-btn">
-                        <i class="fa fa-search">
-                        </i>
-                    </button>
-                </form>
-            </div>
-        </div>
-        <div class="nav-drawer">
-            <div class="close-btn">&times;</div>
-        </div>
-    </div>
+                    </div>
+                    <div class="device-search">
+                        <div class="device-topnav-search">
+                            <form method="get" action="/web/dp/search" style="width: 100%;" class=" internal"> <input
+                                    class="topnav-search-input device" placeholder="Search" required="required" value=""
+                                    name="keywords" type="text" /> <button type="submit" tabindex="-1"
+                                    class="device-topnav-search-btn"><i class="fa fa-search"></i></button> </form>
+                        </div>
+                    </div>
+                </div>
 
 
                 <div class="content-area">
