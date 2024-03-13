@@ -8,7 +8,7 @@
     <script
         type="text/javascript">if (typeof console === "undefined" || typeof console.log === "undefined") { console = {}; console.log = function (a) { return } } (function () { var a = new RegExp("^\\d+\\.\\d+\\.\\d+\\.\\d+$"); var b = a.test(window.location.hostname) || window.location.hostname.toLowerCase().indexOf("localhost") >= 0 || window.location.search.toLowerCase().indexOf("debug") >= 0; if (b == false) { var d = function (f, e) { console.log(f + " \n" + e); window._gaq = window._gaq || []; window._gaq.push(["_trackEvent", "Exception", f, e, 1, true]) }; window.addEventListener("error", function (g) { g.preventDefault(); g.stopPropagation(); var e = g.target && (g.target.src || g.target.currentSrc); if (e && g.target.src.indexOf("keepalive") >= 0) { return } var h = e ? ("Missing reference for '" + (g.target.src || g.target.currentSrc) + "'") : g.message; var f = "Where -> " + window.location.href + (e ? "" : (" | File -> " + g.filename + " | Line -> " + g.lineno)); d(h, f) }, true); var c = function () { if (window.jQuery) { $(document).ajaxError(function (j, h, g) { var i = "AjaxError: " + g.url + " -> Result " + j.result; var f = "Where -> " + window.location.href; d(i, f) }) } else { setTimeout(c, 250) } }; c(); window.onerror = function () { return true } } })();</script>
     <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-    <link href="https://developer.vmware.com/vmware-code-theme/images/favicon.ico" rel="Shortcut Icon" />
+    <link href="/vmware-code-theme/images/favicon.ico" rel="Shortcut Icon" />
     <link rel="icon" href="https://www.vmware.com/favicon.ico" type="image/x-icon" />
     <link href="https://code.vmware.com" rel="canonical" />
     <link href="https://code.vmware.com/zh" hreflang="zh-CN" rel="alternate" />
@@ -300,7 +300,7 @@
                                 type="text/javascript">$(document).ready(function () { $("#localeSelector").on("click", function () { var a = '<ul id="availableLocales">    <li>        <a data-locale="zh" href="javascript:void(0);">            中文        </a>    </li>    <li>        <a data-locale="en" href="javascript:void(0);">            English        </a>    </li>    <li>        <a data-locale="ja" href="javascript:void(0);">            日本語        </a>    </li></ul>'; alertEx({ header: "Choose a Language", message: a, ok: "Cancel" }); $("#availableLocales a").off("click").on("click", function () { var c = window.location.pathname; var b = (c[0] === "/" && (c[3] === "/" || c.length === 3)) ? c.substring(3) : c; window.location = "/" + $(this).data("locale") + b + window.location.search + window.location.hash }); return false }) });</script>
                             <!-- <li class="divider-vertical" style="height: 15px;margin:10px 10px 0 0px"></li> -->
                             <li class="login-tooltip"> <a
-                                    href="https://devportal-csp-authenticator.esp.vmware.com/api/auth/discovery?targetUri=https://developer.vmware.com/web/dp/horizon-login"
+                                    href="https://devportal-csp-authenticator.esp.vmware.com/api/auth/discovery?targetUri=/web/dp/horizon-login"
                                     id="login-trigger" style="background: none;padding-left: 10px;font-weight: normal;"
                                     target="_self" class=" internal"> Login </a> <span class="login-tooltiptext">Login
                                     with your VMware account (Customer Connect credentials).</span> </li>
@@ -1075,19 +1075,6 @@
                                                         <div class="fr-res-item-desc"> Find utilities and tools for OVF
                                                             packages, Aria (vRealize) file management, remote management
                                                             of ESXi hosts, automated log management and more. </div>
-                                                    </div>
-                                                    <div class="fr-res-item">
-                                                        <div class="fr-res-item-icon"> <img
-                                                                src="/vmware-code-theme/images/tanzu-logo.png "
-                                                                alt="ICON" /> </div>
-                                                        <div class="fr-res-item-link"> <a href="/products/tanzu "
-                                                                class=" internal" target="_self">Tanzu Developer Center
-                                                            </a> </div>
-                                                        <div class="fr-res-item-desc"> Visit the Tanzu Developer Center
-                                                            for guides, code samples, workshops, and videos, all to help
-                                                            you learn the modern application development patterns you
-                                                            need to run apps using containers and Kubernetes, build
-                                                            microservices with Spring, and more! </div>
                                                     </div>
                                                     <div class="fr-res-item">
                                                         <div class="fr-res-item-icon"> <img
@@ -1932,7 +1919,7 @@
                 <div class="portlet-borderless-container" style="">
                     <div class="portlet-body">
                         <script
-                            type="text/javascript">$(window).load(function () { DP.Tracking.initTrackingPortlet("https://developer.vmware.com/web/dp/home?p_p_id=tracker_WAR_dpportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_cacheability=cacheLevelPage") });</script>
+                            type="text/javascript">$(window).load(function () { DP.Tracking.initTrackingPortlet("/web/dp/home?p_p_id=tracker_WAR_dpportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_cacheability=cacheLevelPage") });</script>
                     </div>
                 </div>
             </div>
