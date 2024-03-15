@@ -1,4 +1,11 @@
 .collapsible {
+    background-color: #1897d1;
+    color: #fff;
+    font-size: 18px;
+    text-align: left;
+    padding: 5px 20px;
+    margin: 0 0 15px 0;
+    width: inherit;
     border: none;
     cursor: pointer
 }
@@ -11,7 +18,7 @@
     color: #565656;
 }
 
-.collapsecontent {
+.collapsed_content {
     display: none;
     overflow: hidden
 }
