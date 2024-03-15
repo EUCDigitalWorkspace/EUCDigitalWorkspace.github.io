@@ -1,0 +1,17 @@
+.collapsible {
+    border: none;
+    cursor: pointer
+}
+
+.active, .collapsible:hover {
+    background-color: #0094d2;
+}
+
+.collapsible:visited {
+    color: #565656;
+}
+
+.collapsecontent {
+    display: none;
+    overflow: hidden
+}
