@@ -1,4 +1,4 @@
-.collapsible {
+.collapsible_button {
     background-color: #1897d1;
     color: #fff;
     font-size: 18px;
@@ -10,15 +10,15 @@
     cursor: pointer
 }
 
-.active, .collapsible:hover {
+.active, .collapsible_button:hover {
     background-color: #0094d2;
 }
 
-.collapsible:visited {
+.collapsible_button:visited {
     color: #565656;
 }
 
-.collapsible_content {
+.collapsible_button_content {
     display: none;
     overflow: hidden
 }
