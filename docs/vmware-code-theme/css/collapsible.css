@@ -20,5 +20,14 @@
 
 .collapsible_button_content {
     display: none;
-    overflow: hidden
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.collapsible_button:after {
+    content: '\002B'
+}
+
+.active:after {
+    content: '\2212'
 }
