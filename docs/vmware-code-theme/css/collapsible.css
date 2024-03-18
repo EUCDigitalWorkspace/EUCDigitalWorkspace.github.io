@@ -10,7 +10,7 @@
     cursor: pointer
 }
 
-.active, .collapsible_button:hover {
+.collapsible_button:hover {
     background-color: #0094d2;
 }
 
