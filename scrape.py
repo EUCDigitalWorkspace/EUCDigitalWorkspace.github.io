@@ -4,7 +4,7 @@ from sys import argv
 import os
 import requests
 from bs4 import BeautifulSoup
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urldefrag
 from PIL import Image
 from io import BytesIO
 import traceback
@@ -113,7 +113,10 @@ def scrape_website(url, base_folder, domain, recursive=False, downloaded: dict =
                         downloaded[dir_links].add(link)
                         print_move(link)
                         scrape_website(link, base_folder, domain, True, downloaded)
-    
+    else:
+        downloaded[dir_links].add(url)
+        write_failed_response(response.status_code, url)
+
     return {
         'downloaded': downloaded
     }
@@ -149,7 +152,22 @@ def format_download_dirs(dir_list: list, base_url, domain):
         if link[0] == '/' and len(link) > 1:
             link = "https://" + domain + link
 
+        # assume reference to same level item, if not item will 404 on get request and write failure to failures
+        # this is probably wrong
+        if not re.search('https?://', link):
+            link = "https://" + domain + link
+
+        if re.search('javascript:void\(0\)', link):
+            continue
+
+        if link.find('#') != -1:
+            link, _ = urldefrag(link)
+
         parsed_link = urlparse(link)
+
+        # remove query if present
+        if (parsed_link.query) != '':
+            link = parsed_link._replace(query="").geturl()
         
         # this is a skip for a typo in a url i found that caused issues
         if str(parsed_link.path).find('//') != -1:
@@ -161,6 +179,9 @@ def format_download_dirs(dir_list: list, base_url, domain):
 
         if base_ext not in parsed_link.path:
             continue
+
+        if link.endswith('/'):
+            link = link[:-1]
 
         keep_list.append(link)
     return keep_list
@@ -237,26 +258,10 @@ def download_file(url, base_folder, downloaded: set):
             # Download and save complete, add to downloaded dict
             downloaded.add(url)
         else:
-            with open("Scrape_failures.txt", 'a') as txt:
-                txt.write(
-                    f'''
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                    FAILURE: {str(response.status_code)}
-                    Could not download: {url}
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                    ''')
+            write_failed_response(response.status_code, url)
 
     except Exception as e:
-        with open("Scrape_Failures.txt", 'a') as txt:
-            txt.write(
-                f'''
-                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                FAILURE:
-                Exception occurred during download of: {url}
-                Exception: {e}
-                Traceback: {traceback.format_exc()}
-                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-            ''')
+        write_failed_exception(e, url)
 
 
 # Splits the link into an array. Then uses an array of the original path to replace the relative directory symbols with the real path
@@ -318,6 +323,30 @@ Moving to first linked dependency: {link}
 ********************************************************************
         '''
             )
+
+
+def write_failed_response(status_code, url):
+        with open("Scrape_failures.txt", 'a') as txt:
+            txt.write(
+                f'''
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                FAILURE: {str(status_code)}
+                Could not download: {url}
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                ''')
+
+
+def write_failed_exception(e, url):
+        with open("Scrape_Failures.txt", 'a') as txt:
+            txt.write(
+                f'''
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                FAILURE:
+                Exception occurred during download of: {url}
+                Exception: {e}
+                Traceback: {traceback.format_exc()}
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            ''')
     
 def setup_args():
     parser = argparse.ArgumentParser()
